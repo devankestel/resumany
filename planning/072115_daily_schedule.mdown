@@ -1,0 +1,18 @@
+07/21/15 Daily Schedule 
+
+Title - STATIC DAY
+
+Tasks 
+
+* Set up resume, experience, and demonstration models
+* Set up corresponding controllers and resources 
+* Seed fake resume to show on index page 
+* Add in taggable gem, or make demonstrations taggable by hand
+
+
+Stretch Goals
+
+* Filter fake resume data by all tags and generate set of fake resumes
+* Add in paperclip gem for file attachments 
+* Start research on how to auto-generate *.pdf, *.docx, and *.txt files from data
+  so that attachments can be created. 

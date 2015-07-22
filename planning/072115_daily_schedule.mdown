@@ -16,3 +16,16 @@ Stretch Goals
 * Add in paperclip gem for file attachments 
 * Start research on how to auto-generate *.pdf, *.docx, and *.txt files from data
   so that attachments can be created. 
+
+
+07/21/15 Actual - RESEARCH DAY
+
+* Created overall project schedule
+* Asked experts what attributes should be included in models (Susanna + Brian)
+* Proposed full schema with data names, types, descriptions, relations (excluding User model, to be done later)
+* Researched Acts_As_Taggable_On Gem
+* Did some Yak Shaving for Taggable gem 
+* Researched PDF and Docx writer options
+* Created resources file in planning directory to organize research
+
+Commments: Oops, today seems to have been RESEARCH DAY. Probably will give STATIC DAY a try again tomorrow!

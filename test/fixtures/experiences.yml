@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  organization: MyString
+  start_month: 1
+  start_year: 1
+  end_month: 1
+  end_year: 1
+  type: 
+  city: MyString
+  state_or_country: MyString
+  present: false
+  resume_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  organization: MyString
+  start_month: 1
+  start_year: 1
+  end_month: 1
+  end_year: 1
+  type: 
+  city: MyString
+  state_or_country: MyString
+  present: false
+  resume_id: 1

@@ -14,11 +14,13 @@ Additional Features
 9. Dynamic edits (web-sockets) via AJAX/jQuery
 10. Resumes can be public or private
 11. Multiple style options available
-12. Payment option 
+12. Resume sections can be re-ordered via click + drag
+13. Payment option 
+14. Upload instead of using web form to create new CV.
 
 General plan - 
 
-Schedule w/milestons + individual bullet list plan for each day.
+Schedule w/milestones + individual bullet list plan for each day.
 
 Milestones
 
@@ -28,4 +30,4 @@ Friday, July 31st - Features 4 and 6 complted. Stretch goal - Feature 7.
 Monday, August 3rd - Feature 7 completed. 
 Wednesday, August 5th - Some additional features completed. 
 
- 
+

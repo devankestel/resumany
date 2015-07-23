@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add in so that Demonstrations can have tags 
 gem 'acts-as-taggable-on'
 
+# Add in so that attachments can be downloaded
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

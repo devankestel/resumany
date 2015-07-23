@@ -37,5 +37,7 @@ PDF, docx, txt Generation
   Docx Documentation (Docx reader and writer, still in development but stable)
     https://github.com/chrahunt/docx
 
+Cocoon Gem for jQuery forms 
+
 
 

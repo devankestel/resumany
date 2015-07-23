@@ -1,0 +1,12 @@
+This is a sample file. 
+It will be used along with seeded data for intial app testing. 
+In the final app, this file will contain a resume, generated from the user inputed data.
+
+I'm adding some other filler text here. 
+
+And here.
+
+And even more right here. 
+
+Clearly writing all of this random text qualifies me for a job, and I don't really need a full resume.
+Maybe I should just stop programming right now? 

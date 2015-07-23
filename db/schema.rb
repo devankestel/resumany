@@ -11,7 +11,65 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150722022029) do
+ActiveRecord::Schema.define(version: 20150723122154) do
+
+  create_table "demonstrations", force: :cascade do |t|
+    t.string   "description"
+    t.boolean  "core",          default: false
+    t.string   "subset"
+    t.string   "category"
+    t.string   "cert"
+    t.integer  "experience_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "organization"
+    t.integer  "start_month"
+    t.integer  "start_year"
+    t.integer  "end_month"
+    t.integer  "end_year"
+    t.string   "category"
+    t.string   "city"
+    t.string   "state_or_country"
+    t.boolean  "present",          default: false
+    t.integer  "resume_id"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string   "url"
+    t.string   "title"
+    t.integer  "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "resume_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "profile"
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.string   "txt_file_name"
+    t.string   "txt_content_type"
+    t.integer  "txt_file_size"
+    t.datetime "txt_updated_at"
+    t.string   "docx_file_name"
+    t.string   "docx_content_type"
+    t.integer  "docx_file_size"
+    t.datetime "docx_updated_at"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"

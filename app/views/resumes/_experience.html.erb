@@ -5,7 +5,7 @@
 
 
 <!-- Demonstrations collection partial goes here -->
-<% @demonstrations = experience.demonstrations.all %>
+<% @demonstrations = experience.selected_demos %>
 <ul>
   <%= render partial: "demonstration", collection: @demonstrations %>
 </ul>

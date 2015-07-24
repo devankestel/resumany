@@ -40,7 +40,7 @@ seed_docx = File.open ('/Users/devankestel1/Documents/resumany/app/assets/docx/s
 # new lesson: excitedly create thigns so we get real errors!
 
 my_resume = Resume.create!(name: "Devan E. Kestel",
-                          resume_name: "devan_resume",
+                          resume_name: "cv",
                           email: "devan.kestel@gmail.com",
                           phone: "617.233.2629",
                           profile: "If I had one of these worked up, it would be a paragraph telling you about me. It would also contain some objective statement garbage. I'm going to keep typing things to make this feel more like a paragraph in terms of length. Yes, I will always be too lazy to go grab some lorem ipsum when I need it. There, I think we are about at the right length.",
@@ -107,7 +107,7 @@ iron_yard = my_resume.experiences.create!(title: "Rails Engineering",
                                              end_month: 8,
                                              end_year: 2015)
 
-notre_dame = my_resume.experiences.create!(title: "MS, Chemical and Biomolecular Engineering",
+notre_dame = my_resume.experiences.create!(title: "M.S. in Chemical and Biomolecular Engineering",
                                              organization: "University of Notre Dame du Lac",
                                              city: "Notre Dame",
                                              state_or_country: "IN",
@@ -116,12 +116,12 @@ notre_dame = my_resume.experiences.create!(title: "MS, Chemical and Biomolecular
                                              Adviser: Dr. Joan Brennecke",
                                              end_month: 5,
                                              end_year: 2010)
-mit = my_resume.experiences.create!(title: "BS Chemical Engineering, minor Spanish",
+mit = my_resume.experiences.create!(title: "B.S. in Chemical Engineering, minor in Spanish",
                                              organization: "Massachusetts Institute of Technology",
                                              city: "Cambridge",
                                              state_or_country: "MA",
                                              category: "education",
-                                             description: "All chemical engineering courses relied heavily upon MATLAB and data science principles. Other releveant course: Intro to Python.",
+                                             description: "All chemical engineering courses relied heavily upon MATLAB and data science principles. Other relevant course: Intro to Python.",
                                              end_month: 6,
                                              end_year: 2007)
 
@@ -136,7 +136,7 @@ axalta = my_resume.experiences.create!(title: "Senior Chemical Engineer",
                                              end_month: 4,
                                              end_year: 2015)
 
-nd_research = my_resume.experiences.create!(title: "Graduate Research Assitant",
+nd_research = my_resume.experiences.create!(title: "Graduate Research Assistant",
                                              organization: "University of Notre Dame du Lac",
                                              city: "Notre Dame",
                                              state_or_country: "IN",
@@ -182,16 +182,16 @@ puts iron_yard.end_year
 axalta_b1 = axalta.demonstrations.create!(description: "Product formulation, optimization, and technical support of solventborne and waterborne automotive coatings for General Motors accounts with revenue exceeding $30MM annually.",
                                           category: "accomplishment",
                                           core: true)
-axalta_b2 = axalta.demonstrations.create!(description: "Optimized, commercialized, and launched a two­component, polyurethane clearcoat system which delivered $800M revenue growth in 2012.",
+axalta_b2 = axalta.demonstrations.create!(description: "Optimized, commercialized, and launched a two­-component, polyurethane clearcoat system which delivered $800M revenue growth in 2012.",
                                           category: "accomplishment",
                                           core: true)
-axalta_b3 = axalta.demonstrations.create!(description: "Developed new rheology test method with optimized shear profile, reducing error in measurement by 50%, for non­Newtonian solventborne paint systems.",
+axalta_b3 = axalta.demonstrations.create!(description: "Developed new rheology test method with optimized shear profile, reducing error in measurement by 50%, for non­-Newtonian solventborne paint systems.",
                                           category: "accomplishment",
                                           core: true)
 axalta_b4 = axalta.demonstrations.create!(description: "Technical lead for innovative spray process and paint technology conversion program which minimized assembly line downtime by 50% over conventional conversion.",
                                           category: "accomplishment",
                                           core: true)
-axalta_b5 = axalta.demonstrations.create!(description: "Provided support to Arlington Assembly, GM's most profitable manufacturing site, via new color development, formulation adjustments, and troubleshooting line issues (2011 ­ 2013). Currently provide support to Bowling Green Assembly, home of the Corvette.",
+axalta_b5 = axalta.demonstrations.create!(description: "Provided support to Arlington Assembly, GM's most profitable manufacturing site, via new color development, formulation adjustments, and troubleshooting line issues (2011-2013). Currently provide support to Bowling Green Assembly, home of the Corvette.",
                                           category: "accomplishment",
                                           core: true)
 axalta_b6 = axalta.demonstrations.create!(description: "In addition to research and development, interface with manufacturing, quality assurance, sales and marketing, product stewardship, and field account teams on a daily basis.",
@@ -200,7 +200,7 @@ axalta_b6 = axalta.demonstrations.create!(description: "In addition to research 
 axalta_b7 = axalta.demonstrations.create!(description: "Work in a high­pressured, multi­tasking environment with constantly changing priorities and frequently required to make \"on the spot\" decisions that directly impact manufacturing at both Axalta and GM sites.",
                                           category: "accomplishment",
                                           core: true)
-axalta_b8 = axalta.demonstrations.create!(description: "Align formulas, manufacturing procedures, and product design specifications for manufacturing scale­up.",
+axalta_b8 = axalta.demonstrations.create!(description: "Align formulas, manufacturing procedures, and product design specifications for manufacturing scale­-up.",
                                           category: "accomplishment",
                                           core: true)
 axalta_b9 = axalta.demonstrations.create!(description: "Serve on site team of internal quality auditors. Audit 6 areas per year against ISO:9001 and TS­16949 standards. Interview exempt and non­exempt employees across all shifts.",
@@ -212,10 +212,10 @@ nd_b1 = nd_research.demonstrations.create!(description: "Thermophysical property
 nd_b2 = nd_research.demonstrations.create!(description: "Worked in a hybrid experimental and computational team to rapidly screen and characterize candidate ionic liquids for process optima including: relative volatility and solubility, hydrophobicity, corrosivity, toxicity, reaction and absorption enthalpies, and others properties relevant to process scale­up.",
                                           category: "accomplishment",
                                           core: true)
-nd_b3 = nd_research.demonstrations.create!(description: "Gravimetric measurement of binary vapor­liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.",
+nd_b3 = nd_research.demonstrations.create!(description: "Gravimetric measurement of binary vapor­-liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.",
                                           category: "accomplishment",
                                           core: true)
-nd_b4 = nd_research.demonstrations.create!(description: "Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­functionalized ionic liquid systems.",
+nd_b4 = nd_research.demonstrations.create!(description: "Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­-functionalized ionic liquid systems.",
                                           category: "accomplishment",
                                           core: true)
 nd_b5 = nd_research.demonstrations.create!(description: "Supervised design and construction of ionic liquid absorber/ stripper unit.",
@@ -224,7 +224,7 @@ nd_b5 = nd_research.demonstrations.create!(description: "Supervised design and c
 nd_b6 = nd_research.demonstrations.create!(description: "Proficient with both high and low pressure systems.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b1 = alltech.demonstrations.create!(description: "Product development, process design, and pilot plant management for Optigen, a controlled­release, non­protein nitrogen supplement for dairy cattle which is now commercialized.",
+alltech_b1 = alltech.demonstrations.create!(description: "Product development, process design, and pilot plant management for Optigen, a controlled­-release, non­protein nitrogen supplement for dairy cattle which is now commercialized.",
                                           category: "accomplishment",
                                           core: true)
 alltech_b2 = alltech.demonstrations.create!(description: "Facilitated formulation of controlled­release coating.",

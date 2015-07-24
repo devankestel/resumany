@@ -1,5 +1,8 @@
-<%= header.name %>
-<%= header.email %>
-<%= header.phone %>
+<h1><%= header.name %></h1>
+<h3><%= header.email %></h3>
+<h3><%= header.phone %></h3>
 
 <!-- #links collection partial -->
+<ul>
+  <%= render partial: "link", collection: @links %>
+</ul>

@@ -39,5 +39,10 @@ PDF, docx, txt Generation
 
 Cocoon Gem for jQuery forms 
 
+Date::MONTHNAMES
 
+Rendering Partials
+
+  API.rubyonrails.org
+    http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
 

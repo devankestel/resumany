@@ -1,6 +1,11 @@
-<%= experience.organization%>
-<%= experience.title %>
-<%= "#{experience.start_month} , #{experience.start_year}" %>
-<%= experience.description %>
+<h2><%= experience.organization%></h2>
+<h3><%= experience.title %></h3>
+<p><%= experience.daterange %></p>
+<p><%= experience.description %></p>
 
-<!-- Demonstrations collectin partial goes here -->
+
+<!-- Demonstrations collection partial goes here -->
+<% @demonstrations = experience.demonstrations.all %>
+<ul>
+  <%= render partial: "demonstration", collection: @demonstrations %>
+</ul>

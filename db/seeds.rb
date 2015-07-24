@@ -206,40 +206,40 @@ axalta_b8 = axalta.demonstrations.create!(description: "Align formulas, manufact
 axalta_b9 = axalta.demonstrations.create!(description: "Serve on site team of internal quality auditors. Audit 6 areas per year against ISO:9001 and TS­16949 standards. Interview exempt and non­exempt employees across all shifts.",
                                           category: "accomplishment",
                                           core: true)
-nd_b1 = axalta.demonstrations.create!(description: "Thermophysical property measurement and estimation of ionic liquid systems for use as environmentally benign working fluids for carbon dioxide capture.",
+nd_b1 = nd_research.demonstrations.create!(description: "Thermophysical property measurement and estimation of ionic liquid systems for use as environmentally benign working fluids for carbon dioxide capture.",
                                           category: "accomplishment",
                                           core: true)
-nd_b2 = axalta.demonstrations.create!(description: "Worked in a hybrid experimental and computational team to rapidly screen and characterize candidate ionic liquids for process optima including: relative volatility and solubility, hydrophobicity, corrosivity, toxicity, reaction and absorption enthalpies, and others properties relevant to process scale­up.",
+nd_b2 = nd_research.demonstrations.create!(description: "Worked in a hybrid experimental and computational team to rapidly screen and characterize candidate ionic liquids for process optima including: relative volatility and solubility, hydrophobicity, corrosivity, toxicity, reaction and absorption enthalpies, and others properties relevant to process scale­up.",
                                           category: "accomplishment",
                                           core: true)
-nd_b3 = axalta.demonstrations.create!(description: "Gravimetric measurement of binary vapor­liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.",
+nd_b3 = nd_research.demonstrations.create!(description: "Gravimetric measurement of binary vapor­liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.",
                                           category: "accomplishment",
                                           core: true)
-nd_b4 = axalta.demonstrations.create!(description: "Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­functionalized ionic liquid systems.",
+nd_b4 = nd_research.demonstrations.create!(description: "Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­functionalized ionic liquid systems.",
                                           category: "accomplishment",
                                           core: true)
-nd_b5 = axalta.demonstrations.create!(description: "Supervised design and construction of ionic liquid absorber/ stripper unit.",
+nd_b5 = nd_research.demonstrations.create!(description: "Supervised design and construction of ionic liquid absorber/ stripper unit.",
                                           category: "accomplishment",
                                           core: true)
-nd_b6 = axalta.demonstrations.create!(description: "Proficient with both high and low pressure systems.",
+nd_b6 = nd_research.demonstrations.create!(description: "Proficient with both high and low pressure systems.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b1 = axalta.demonstrations.create!(description: "Product development, process design, and pilot plant management for Optigen, a controlled­release, non­protein nitrogen supplement for dairy cattle which is now commercialized.",
+alltech_b1 = alltech.demonstrations.create!(description: "Product development, process design, and pilot plant management for Optigen, a controlled­release, non­protein nitrogen supplement for dairy cattle which is now commercialized.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b2 = axalta.demonstrations.create!(description: "Facilitated formulation of controlled­release coating.",
+alltech_b2 = alltech.demonstrations.create!(description: "Facilitated formulation of controlled­release coating.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b3 = axalta.demonstrations.create!(description: "Authored process flow diagrams. Collaborated on design of specialized fluidized bed dryer. Designated process instrumentation for final scale­up.",
+alltech_b3 = alltech.demonstrations.create!(description: "Authored process flow diagrams. Collaborated on design of specialized fluidized bed dryer. Designated process instrumentation for final scale­up.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b4 = axalta.demonstrations.create!(description: "Supervised 3­-4 production workers per shift in pilot plant operations.",
+alltech_b4 = alltech.demonstrations.create!(description: "Supervised 3­-4 production workers per shift in pilot plant operations.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b5 = axalta.demonstrations.create!(description: "Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.",
+alltech_b5 = alltech.demonstrations.create!(description: "Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b6 = axalta.demonstrations.create!(description: "Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.",
+alltech_b6 = alltech.demonstrations.create!(description: "Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.",
                                           category: "accomplishment",
                                           core: true)
 

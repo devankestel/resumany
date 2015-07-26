@@ -12,7 +12,9 @@ class Experience < ActiveRecord::Base
 
   def selected_demos
     if self.resume.resume_name == "cv"
-      self.demonstrations.all
+      
+      (self.demonstrations.where(core: true) + self.demonstrations.tagged_with("engineering")).sort_by(&:id)
+      #self.demonstrations.all
     else
       # basic logic but this is going to need some refinement
       # self.demonstrations.where(tag: resume_name)

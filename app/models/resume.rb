@@ -14,14 +14,17 @@ class Resume < ActiveRecord::Base
   def write_txt(route)
     # /Users/devankestel1/Documents/resumany/app/assets/txt/name.txt
     File.open("/Users/devankestel1/Documents/resumany/app/assets/txt/name.txt", 'w') do |file| 
-      file.puts name
-      file.puts ""
-      file.puts email
-      file.puts phone
-      file.puts ""
-      self.links.each do |link|
-        file.puts "  * #{link.title}: #{link.url}"
-      end
+      header_txt(file)
+    end
+  end
+  def header_txt(file)
+    file.puts name
+    file.puts ""
+    file.puts email
+    file.puts phone
+    file.puts ""
+    self.links.each do |link|
+      file.puts "  * #{link.title}: #{link.url}"
     end
   end
 end

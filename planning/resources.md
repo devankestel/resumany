@@ -50,3 +50,6 @@ Writing A Text File from Ruby Data
   
   File.open(yourfile, 'w') { |file| file.write("your text") }
 
+  Can also use eithet puts or << 
+    http://alvinalexander.com/blog/post/ruby/how-write-text-to-file-ruby-example
+

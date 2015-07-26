@@ -1,3 +1,8 @@
-your text
-other text here
-  * Bullet Point
+Devan E. Kestel
+
+devan.kestel@gmail.com
+617.233.2629
+
+  * Github: http://www.github.com/devankestel
+  * Twitter: http://www.twitter.com/devankestel
+  * Tumblr: http://devankestel.tumblr.com

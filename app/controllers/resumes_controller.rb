@@ -6,7 +6,8 @@ class ResumesController < ApplicationController
   private
 
   def set_instances
-    @resume = Resume.find(params[:id])
+    @resume = Resume.find(1)
+    @route = params[:id]
     @links = @resume.links.all
     @educational_experiences = @resume.experiences.where(category: "education")
     @paid_experiences = @resume.experiences.where(category: "paid")

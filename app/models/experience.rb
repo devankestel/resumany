@@ -10,17 +10,15 @@ class Experience < ActiveRecord::Base
     end
   end
 
-  def selected_demos
-    if self.resume.resume_name == "cv"
-      
-      (self.demonstrations.where(core: true) + self.demonstrations.tagged_with("engineering")).sort_by(&:id)
-      #self.demonstrations.all
+  def selected_demos(name)
+    if name == "cv"
+      self.demonstrations.all
     else
       # basic logic but this is going to need some refinement
       # self.demonstrations.where(tag: resume_name)
       #just left this way so that i have a collection of something for testing
       #that is different from the collection in the 'if' statement
-      self.all  
+      (self.demonstrations.where(core: true) + self.demonstrations.tagged_with(name)).sort_by(&:id) 
     end
   end
 end

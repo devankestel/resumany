@@ -46,3 +46,7 @@ Rendering Partials
   API.rubyonrails.org
     http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
 
+Writing A Text File from Ruby Data
+  
+  File.open(yourfile, 'w') { |file| file.write("your text") }
+

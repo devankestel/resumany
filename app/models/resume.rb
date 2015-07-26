@@ -11,9 +11,12 @@ class Resume < ActiveRecord::Base
   validates_attachment_content_type :docx, :content_type =>['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
   validates_attachment_content_type :txt, :content_type =>['text/plain']
 
-  def set_instances
-    @resume = Resume.find(params[:id])
-    @links = @resume.links.all
-    @experiences = @resume.experiences.all
+  def write_txt(route)
+    # /Users/devankestel1/Documents/resumany/app/assets/txt/name.txt
+    File.open("/Users/devankestel1/Documents/resumany/app/assets/txt/name.txt", 'w') do |file| 
+      file.write("your text\n")
+      file.write("other text here\n")
+      file.write("  * Bullet Point")
+    end
   end
 end

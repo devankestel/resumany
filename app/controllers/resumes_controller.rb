@@ -8,8 +8,9 @@ class ResumesController < ApplicationController
   def set_instances
     @resume = Resume.find(params[:id])
     @links = @resume.links.all
-    @experiences = @resume.experiences.all
+    @educational_experiences = @resume.experiences.where(category: "education")
+    @paid_experiences = @resume.experiences.where(category: "paid")
   end
-  
+
 end
 

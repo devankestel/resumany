@@ -2,5 +2,7 @@
 <%= render partial: "header", locals: {header: @resume} %>
 
 <!--#Display Experiences Partial Collection-->
-<%= render partial: "experience", collection: @experiences %>
+<%= render partial: "experience", collection: @paid_experiences %>
+<%= render partial: "experience", collection: @educational_experiences %>
+
 

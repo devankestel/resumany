@@ -184,16 +184,16 @@ axalta_b1 = axalta.demonstrations.create!(description: "Product formulation, opt
                                           core: true)
 axalta_b2 = axalta.demonstrations.create!(description: "Optimized, commercialized, and launched a two­-component, polyurethane clearcoat system which delivered $800M revenue growth in 2012.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "engineering, financial")
 axalta_b3 = axalta.demonstrations.create!(description: "Developed new rheology test method with optimized shear profile, reducing error in measurement by 50%, for non­-Newtonian solventborne paint systems.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "engineering")
 axalta_b4 = axalta.demonstrations.create!(description: "Technical lead for innovative spray process and paint technology conversion program which minimized assembly line downtime by 50% over conventional conversion.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "leadership, engineering")
 axalta_b5 = axalta.demonstrations.create!(description: "Provided support to Arlington Assembly, GM's most profitable manufacturing site, via new color development, formulation adjustments, and troubleshooting line issues (2011-2013). Currently provide support to Bowling Green Assembly, home of the Corvette.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "engineering, chemistry, production")
 axalta_b6 = axalta.demonstrations.create!(description: "In addition to research and development, interface with manufacturing, quality assurance, sales and marketing, product stewardship, and field account teams on a daily basis.",
                                           category: "accomplishment",
                                           core: true)
@@ -202,10 +202,10 @@ axalta_b7 = axalta.demonstrations.create!(description: "Work in a high­pressure
                                           core: true)
 axalta_b8 = axalta.demonstrations.create!(description: "Align formulas, manufacturing procedures, and product design specifications for manufacturing scale­-up.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "chemistry, engineering, production")
 axalta_b9 = axalta.demonstrations.create!(description: "Serve on site team of internal quality auditors. Audit 6 areas per year against ISO:9001 and TS­16949 standards. Interview exempt and non­exempt employees across all shifts.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "quality_management")
 nd_b1 = nd_research.demonstrations.create!(description: "Thermophysical property measurement and estimation of ionic liquid systems for use as environmentally benign working fluids for carbon dioxide capture.",
                                           category: "accomplishment",
                                           core: true)
@@ -214,34 +214,32 @@ nd_b2 = nd_research.demonstrations.create!(description: "Worked in a hybrid expe
                                           core: true)
 nd_b3 = nd_research.demonstrations.create!(description: "Gravimetric measurement of binary vapor­-liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "thermodynamics, laboratory")
 nd_b4 = nd_research.demonstrations.create!(description: "Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­-functionalized ionic liquid systems.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "chemistry, engineering, thermodynamics")
 nd_b5 = nd_research.demonstrations.create!(description: "Supervised design and construction of ionic liquid absorber/ stripper unit.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "leadership, engineering")
 nd_b6 = nd_research.demonstrations.create!(description: "Proficient with both high and low pressure systems.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "engineering")
 alltech_b1 = alltech.demonstrations.create!(description: "Product development, process design, and pilot plant management for Optigen, a controlled­-release, non­protein nitrogen supplement for dairy cattle which is now commercialized.",
                                           category: "accomplishment",
                                           core: true)
-alltech_b2 = alltech.demonstrations.create!(description: "Facilitated formulation of controlled­release coating.",
+alltech_b2 = alltech.demonstrations.create!(description: "Facilitated formulation of controlled­-release coating.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "chemistry")
 alltech_b3 = alltech.demonstrations.create!(description: "Authored process flow diagrams. Collaborated on design of specialized fluidized bed dryer. Designated process instrumentation for final scale­up.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "engineering")
 alltech_b4 = alltech.demonstrations.create!(description: "Supervised 3­-4 production workers per shift in pilot plant operations.",
                                           category: "accomplishment",
-                                          core: true)
+                                          tag_list: "leadership")
 alltech_b5 = alltech.demonstrations.create!(description: "Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.",
-                                          category: "accomplishment",
-                                          core: true)
+                                          category: "accomplishment")
 alltech_b6 = alltech.demonstrations.create!(description: "Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.",
-                                          category: "accomplishment",
-                                          core: true)
+                                          category: "accomplishment")
 
 
 

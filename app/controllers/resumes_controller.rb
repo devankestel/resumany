@@ -12,6 +12,7 @@ class ResumesController < ApplicationController
     @educational_experiences = @resume.experiences.where(category: "education")
     @paid_experiences = @resume.experiences.where(category: "paid")
     @resume.write_txt("cv")
+    @resume.write_docx("cv")
   end
 
 end

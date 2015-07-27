@@ -29,6 +29,10 @@ gem 'acts-as-taggable-on'
 # Add in so that attachments can be downloaded
 gem 'paperclip'
 
+# Add in so that docx files can be written
+
+gem 'docx_generator'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

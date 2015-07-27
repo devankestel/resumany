@@ -37,9 +37,29 @@ PDF, docx, txt Generation
   Docx Documentation (Docx reader and writer, still in development but stable)
     https://github.com/chrahunt/docx
 
+  Ruby Native Docx Generation (that doesn't seem to include ability to change font, actually it does!)
+    https://github.com/magicienap/docx_generator
+
 Cocoon Gem for jQuery forms 
 
 Date::MONTHNAMES
+
+Open Office (docx format)
+  Specification
+
+  Notes
+    Tab stop 
+      <style:properties>
+      <style:tab-stops>
+      <style:tab-stop style:position="2cm"/>
+      <style:tab-stop style:position="4cm"/>
+      </style:tab-stops>
+      </style:properties>
+
+      <!ATTLIST style:tab-stop style:position %length; #REQUIRED>
+      <!ATTLIST style:tabtype style:type (left|center|right|char) "left">
+      <!ATTLIST style:tab-stop style:char %char; #IMPLIED>
+      <!ATTLIST style:tab-stop style:leader-char %char; " "> 
 
 Rendering Partials
 

@@ -11,8 +11,8 @@ class ResumesController < ApplicationController
     @links = @resume.links.all
     @educational_experiences = @resume.experiences.where(category: "education")
     @paid_experiences = @resume.experiences.where(category: "paid")
-    @resume.write_txt("cv")
-    @resume.write_docx("cv")
+    @resume.write_txt(@route)
+    @resume.write_docx(@route)
   end
 
 end

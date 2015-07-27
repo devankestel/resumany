@@ -61,6 +61,25 @@ Open Office (docx format)
       <!ATTLIST style:tab-stop style:char %char; #IMPLIED>
       <!ATTLIST style:tab-stop style:leader-char %char; " "> 
 
+      <text:ordered-list text:style-namep"List 1">
+      <text:list-item>
+      <text:p<This is the first list item</text:p>
+      <text:p<This is a continuation of the first list item.</text:p>
+      </text:list-item>
+      <text:list-item>
+      <text:p<This is the second list item.
+      It contains an unordered sub list.</text:p>
+      <text:unordered-list>
+      <text:list-item<<text:p<This is a sub list item.</text:p>
+      <text:list-item<<text:p<This is a sub list item.</text:p>
+      <text:list-item<<text:p<This is a sub list item.</text:p>
+      </text:unordered-list>
+      </text:list item>
+      <text:list-item>
+      <text:p<This is the thirt list item</text:p>
+      </text:list-item>
+      </text:ordered-list>
+
 Rendering Partials
 
   API.rubyonrails.org

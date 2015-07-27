@@ -37,36 +37,50 @@ class Resume < ActiveRecord::Base
       par.newline
       par.text phone
       par.newline
+      if profile
+        par.text ""
+        par.newline
+      end
+      if profile
+        par.text profile
+      end
+      par.text ""
+      par.newline
+    end
+    file.paragraph do |par|
       self.links.each do |link|
         par.text "     • #{link.title}: #{link.url}"
         par.newline
       end
-      par.newline
     end
   end
   
   def experiences_docx(file, route)
     self.experiences.each do |experience|
       file.paragraph do |par|
-        demos = false
+        demos = true
         par.text experience.organization
         par.newline
         par.text experience.title
         par.newline
         par.text experience.daterange
         par.newline
-        par.text ""
-        par.newline
-        #par.text experience.description if experience.description        
-        experience.selected_demos(route).each do |demo|
-          par.tab
-          par.text "• #{demo.description}"
-          par.newline
-          demos = true
-        end
-        if demos
+       
+        if experience.description
           par.text ""
           par.newline
+          par.text experience.description
+          par.newline
+          
+        end 
+        experience.selected_demos(route).each do |demo|
+          if demos
+            par.text ""
+            par.newline
+          end
+          par.text "• #{demo.description}"
+          par.newline
+          demos = false  
         end
       end
     end

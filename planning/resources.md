@@ -25,6 +25,36 @@ PDF, docx, txt Generation
   Prawn Manual
     http://prawnpdf.org/manual.pdf
 
+  Prawn Simple Invoice Example 
+    https://github.com/fadhlirahim/prawn-examples/blob/master/examples/invoice.rb
+
+  Prawn Bullets
+    http://stackoverflow.com/questions/10513581/using-lists-in-prawn
+
+    items = ["first","second","third"]
+    def bullet_list(items)
+      start_new_page if cursor < 50
+      items.each do |item|
+        text_box "•", at: [13, cursor]
+        indent(30) do
+          text item
+        end
+      end
+    end
+
+    OR
+
+    def bullet_item(level = 1, string)
+      indent (15 * level), 0 do
+          text "• " + string
+      end
+    end
+    
+    Simply call this method like so:
+
+    bullet_item(1, "Text for bullet point 1")
+    bullet_item(2, "Sub point")
+
   Wicked PDF Documentation (generation directly from HTML)
     https://github.com/mileszs/wicked_pdf
 

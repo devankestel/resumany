@@ -1,4 +1,5 @@
 require 'docx_generator'
+require 'prawn'
 
 class Resume < ActiveRecord::Base
   has_many :experiences
@@ -28,6 +29,26 @@ class Resume < ActiveRecord::Base
       experiences_txt(file, route) 
     end
   end
+
+  def write_pdf(route)
+    file = Prawn::Document.new
+    header_pdf(file)
+    #experiences_pdf(file, route)
+    file.render_file "/Users/devankestel1/Documents/resumany/app/assets/pdf/name.pdf"
+  end
+
+  def header_pdf(file)
+    file.text name
+    file.text email
+    file.text phone
+    file.text profile
+    file.text "  "
+    file.text "  "
+    link_text = self.links.map do |link|
+      "#{link.title}: #{link.url}"
+    end
+    list_pdf(file, link_text)
+  end  
   
   def header_docx(file)
     file.paragraph do |par|
@@ -117,4 +138,34 @@ class Resume < ActiveRecord::Base
       file.puts "" if demos
     end
   end
+
+  def list_pdf(file, items)
+      rhythm  = 10
+      leading = 2
+      black = "000000"
+      file.move_up(rhythm)
+
+      inner_box(file) do
+        file.font("Helvetica", :size => 11) do
+          items.each do |li|
+              file.float { file.text("•", :color => black) }
+              file.indent(rhythm) do
+                file.text(li.gsub(/\s+/," "),
+                     :inline_format => true,
+                     :color         => black,
+                     :leading       => leading)
+              end
+              file.move_down(rhythm)
+          end
+        end
+      end
+  end
+
+  def inner_box(file, &block)
+        inner_margin = 30
+        file.bounding_box([inner_margin, file.cursor],
+                     :width => file.bounds.width - inner_margin*2,
+                     &block)
+  end
+  ############ end of Class ##############
 end

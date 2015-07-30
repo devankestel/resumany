@@ -28,6 +28,9 @@ PDF, docx, txt Generation
   Prawn Simple Invoice Example 
     https://github.com/fadhlirahim/prawn-examples/blob/master/examples/invoice.rb
 
+  Prawn Rails? (What's the difference?)
+    https://github.com/cortiz/prawn-rails
+
   Prawn Bullets
     http://stackoverflow.com/questions/10513581/using-lists-in-prawn
 
@@ -54,6 +57,31 @@ PDF, docx, txt Generation
 
     bullet_item(1, "Text for bullet point 1")
     bullet_item(2, "Sub point")
+
+    def list(*items)
+      RHYTHM  = 10
+      LEADING = 2
+      BLACK = "000000"
+      move_up(RHYTHM)
+
+      inner_box do
+        font("Helvetica", :size => 11) do
+          items.each do |li|
+              float { text("•", :color => DARK_GRAY) }
+              indent(RHYTHM) do
+                text(li.gsub(/\s+/," "),
+                     :inline_format => true,
+                     :color         => BLACK,
+                     :leading       => LEADING)
+              end
+              move_down(RHYTHM)
+          end
+        end
+      end
+    end
+
+    RHYTHM  = 10
+    LEADING = 2
 
   Wicked PDF Documentation (generation directly from HTML)
     https://github.com/mileszs/wicked_pdf
@@ -121,4 +149,12 @@ Writing A Text File from Ruby Data
 
   Can also use eithet puts or << 
     http://alvinalexander.com/blog/post/ruby/how-write-text-to-file-ruby-example
+
+Humanize Method
+  http://apidock.com/rails/String/humanize
+
+Tableize? 
+
+All the stringy thingies
+  http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-camelize
 

@@ -33,6 +33,10 @@ gem 'paperclip'
 
 gem 'docx_generator'
 
+# Add in so that pdf files can be written 
+
+gem 'prawn'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

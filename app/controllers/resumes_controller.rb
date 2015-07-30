@@ -13,6 +13,7 @@ class ResumesController < ApplicationController
     @paid_experiences = @resume.experiences.where(category: "paid")
     @resume.write_txt(@route)
     @resume.write_docx(@route)
+    @resume.write_pdf(@route)
   end
 
 end

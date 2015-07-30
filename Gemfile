@@ -30,12 +30,14 @@ gem 'acts-as-taggable-on'
 gem 'paperclip'
 
 # Add in so that docx files can be written
-
 gem 'docx_generator'
 
 # Add in so that pdf files can be written 
-
 gem 'prawn'
+
+# Add in so that forms are easier to build
+
+gem 'formtastic'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

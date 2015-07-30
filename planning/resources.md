@@ -158,3 +158,5 @@ Tableize?
 All the stringy thingies
   http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-camelize
 
+:collection – customizes the options available in the select by passing in a collection (an Array or Hash)
+

@@ -1,0 +1,10 @@
+<%= semantic_form_for @resume do |f| %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
+  <%= f.input :profile, as: :text, :input_html => {:class => 'autogrow', rows: 10, cols: 125, maxlength: 125} %>
+  <%= f.input :pdf %>
+  <%= f.actions %>
+
+<% end %>

@@ -3,6 +3,13 @@ class ResumesController < ApplicationController
     set_instances
   end
 
+  def new
+    @resume = Resume.new()
+  end
+
+  def create
+  end
+
   private
 
   def set_instances

@@ -14,10 +14,6 @@ class Experience < ActiveRecord::Base
     if name == "cv"
       self.demonstrations.all
     else
-      # basic logic but this is going to need some refinement
-      # self.demonstrations.where(tag: resume_name)
-      #just left this way so that i have a collection of something for testing
-      #that is different from the collection in the 'if' statement
       (self.demonstrations.where(core: true) + self.demonstrations.tagged_with(name)).sort_by(&:id) 
     end
   end

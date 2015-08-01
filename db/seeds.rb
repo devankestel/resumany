@@ -239,7 +239,8 @@ alltech_b4 = alltech.demonstrations.create!(description: "Supervised 3­-4 produ
 alltech_b5 = alltech.demonstrations.create!(description: "Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.",
                                           category: "accomplishment")
 alltech_b6 = alltech.demonstrations.create!(description: "Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.",
-                                          category: "accomplishment")
+                                          category: "accomplishment",
+                                          tag_list: "beer, fun, stuff")
 
 
 

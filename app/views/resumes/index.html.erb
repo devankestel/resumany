@@ -1,6 +1,6 @@
 <h1>My Resumes</h1>
+
 <ul>
-  <% @tags.each do |tag| %>
-    <li> <%= tag %> </li>
-  <% end %>
+  <li><%= link_to "CV (full resume)", "/resumes/cv" %></li>
+  <%= render partial: "link", collection: @tags %>
 </ul>

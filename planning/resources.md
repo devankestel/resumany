@@ -143,6 +143,10 @@ Rendering Partials
   API.rubyonrails.org
     http://api.rubyonrails.org/classes/ActionView/PartialRenderer.html
 
+Sketch Resources (Assets and Plug-ins)
+
+  http://www.sketchappsources.com/
+
 Writing A Text File from Ruby Data
   
   File.open(yourfile, 'w') { |file| file.write("your text") }
@@ -159,4 +163,32 @@ All the stringy thingies
   http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html#method-i-camelize
 
 :collection – customizes the options available in the select by passing in a collection (an Array or Hash)
+
+ActiveRecord Relation Query Merge
+  http://jpospisil.com/2014/06/16/the-definitive-guide-to-arel-the-sql-manager-for-ruby.html
+
+Haml to Erb
+  https://haml2erb.org/
+
+Utilizing Cocoon for Nested Attributes with Formtastic
+
+  <div id="tasks">
+    <%= f.semantic_fields_for :tasks do |task| %>
+      <%= render 'task_fields', f: task %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add task', f, :tasks %>
+    </div>
+  </div>
+
+  <div class="nested-fields">
+    <%= f.inputs do %>
+      <%= f.input :description %>
+      <%= f.input :done, as: :boolean %>
+      <%= link_to_remove_association "remove task", f %>
+    <% end %>
+  </div>
+
+
+
 

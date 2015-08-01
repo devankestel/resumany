@@ -36,8 +36,10 @@ gem 'docx_generator'
 gem 'prawn'
 
 # Add in so that forms are easier to build
-
 gem 'formtastic'
+
+# Add in so forms can dynamically add has_many relations
+gem 'cocoon', '~>1.2.6'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

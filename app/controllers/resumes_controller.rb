@@ -5,6 +5,7 @@ class ResumesController < ApplicationController
 
   def new
     @resume = Resume.new()
+    @links = @resume.links.new()
   end
 
   def create

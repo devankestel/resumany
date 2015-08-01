@@ -6,6 +6,6 @@ class ActsAsTaggableOn::Tag
     name.downcase.gsub(" ", "_")
   end
   def title
-    name
+    name.humanize
   end
 end

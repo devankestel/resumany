@@ -12,6 +12,17 @@ class Experience < ActiveRecord::Base
     end
   end
 
+  def category_name
+    
+    if self.category == "education" || self.category == "skills"
+      self.category.humanize
+    else
+      "#{self.category.humanize} Experience"
+    end  
+     
+
+  end
+
   def selected_demos(name)
     if name == "cv"
       self.demonstrations.all

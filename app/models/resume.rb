@@ -7,6 +7,7 @@ class Resume < ActiveRecord::Base
   has_many :demonstrations, through: :experiences
 
   accepts_nested_attributes_for :links, allow_destroy: true
+  accepts_nested_attributes_for :experiences, allow_destroy: true
 
   has_attached_file :pdf 
   has_attached_file :docx 

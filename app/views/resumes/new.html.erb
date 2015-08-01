@@ -12,7 +12,14 @@
       <%= link_to_add_association 'add link', f, :links %>
     </div>
   </div>
-  <%= f.input :pdf %>
+  <div id="experiences">
+    <%= f.semantic_fields_for :experiences do |experience| %>
+      <%= render 'experience_fields', f: experience %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add experience', f, :experiences %>
+    </div>
+  </div>
   <%= f.actions %>
 
 <% end %>

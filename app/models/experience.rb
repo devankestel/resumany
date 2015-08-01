@@ -2,6 +2,8 @@ class Experience < ActiveRecord::Base
   belongs_to :resume
   has_many :demonstrations
 
+  accepts_nested_attributes_for :demonstrations, allow_destroy: true
+
   def daterange
     if self.start_year
       "#{Date::MONTHNAMES[self.start_month]} #{self.start_year} - #{Date::MONTHNAMES[self.end_month]} #{self.end_year}"

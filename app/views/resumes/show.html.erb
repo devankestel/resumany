@@ -2,9 +2,9 @@
 <%= render partial: "header", locals: {header: @resume} %>
 
 <!--#Display Experiences Partial Collection-->
-<h2>Experience</h2>
-<%= render partial: "experience", collection: @paid_experiences %>
-<h2>Education</h2>
-<%= render partial: "experience", collection: @educational_experiences %>
 
+<% @experiences_collections.each do |collection| %>
+  <h2>Label That Will Change Eventually</h2>
+  <%= render partial: "experience", collection: collection %>
+<% end %>
 

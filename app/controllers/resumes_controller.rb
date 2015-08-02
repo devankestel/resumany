@@ -22,6 +22,7 @@ class ResumesController < ApplicationController
   def new
     @resume = Resume.new()
     @links = @resume.links.new()
+    @years = (1900..2015).to_a.reverse!
   end
 
   def create

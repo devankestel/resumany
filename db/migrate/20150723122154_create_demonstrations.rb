@@ -4,6 +4,7 @@ class CreateDemonstrations < ActiveRecord::Migration
       t.string :description
       t.boolean :core, default: false
       t.string :subset
+      t.string :display
       t.string :category
       t.string :cert
       t.integer :experience_id

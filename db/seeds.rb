@@ -156,6 +156,8 @@ alltech = my_resume.experiences.create!(title: "Chemical Engineering Intern",
                                              end_month: 8,
                                              end_year: 2006)
 
+skills = my_resume.experiences.create!(category: "skill")
+
 puts iron_yard.organization
 puts iron_yard.title
 puts iron_yard.city
@@ -169,6 +171,7 @@ puts iron_yard.end_year
 #     t.boolean  "core",          default: false
 #     t.string   "subset"
 #     t.string   "category"
+#     t.string   "display"
 #     t.string   "cert"
 #     t.integer  "experience_id"
 #     t.datetime "created_at",                    null: false
@@ -241,6 +244,23 @@ alltech_b5 = alltech.demonstrations.create!(description: "Designed and formulate
 alltech_b6 = alltech.demonstrations.create!(description: "Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.",
                                           category: "accomplishment",
                                           tag_list: "beer, fun, stuff")
+
+skills_l1 = skills.demonstrations.create!(display: "list",
+                                          subset: "Programming",
+                                          description: "Ruby, Rails, JS, HTML5, CSS3, MATLAB, C++, Python",
+                                          core: true)
+skills_p1 = skills.demonstrations.create!(display: "paragraph",
+                                          subset: "Javascript",
+                                          description: "Here is where I talk about all the fancy Codeschool courses I took and badges I earned. In paragraph format. So this has to be long like sentences and stuff. There you go.",
+                                          core: true)
+skills_l1 = skills.demonstrations.create!(display: "list",
+                                          subset: "Certifications",
+                                          description: "Certified Beer Server, RABSQA Lead Internal Quality Auditor, Six Sigma Greenbelt",
+                                          core: true)
+skills_p1 = skills.demonstrations.create!(display: "paragraph",
+                                          subset: "Spanish",
+                                          description: "Here is where I blather about my fancy study abroad in Madrid that lasted six months where I took lots of courses and did lots of things. Fluency in a foreign language is cool and should count for something.",
+                                          core: true) 
 
 
 

@@ -7,14 +7,15 @@ class Experience < ActiveRecord::Base
   def daterange
     if self.start_year
       "#{Date::MONTHNAMES[self.start_month]} #{self.start_year} - #{Date::MONTHNAMES[self.end_month]} #{self.end_year}"
-    else
+    elsif self.end_year
       "#{Date::MONTHNAMES[self.end_month]} #{self.end_year}"
+    else
     end
   end
 
   def category_name
     
-    if self.category == "education" || self.category == "skills"
+    if self.category == "education" || self.category == "skill"
       self.category.humanize
     else
       "#{self.category.humanize} Experience"

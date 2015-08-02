@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150723122154) do
     t.string   "description"
     t.boolean  "core",          default: false
     t.string   "subset"
+    t.string   "display"
     t.string   "category"
     t.string   "cert"
     t.integer  "experience_id"

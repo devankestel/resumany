@@ -189,6 +189,12 @@ Utilizing Cocoon for Nested Attributes with Formtastic
     <% end %>
   </div>
 
+HTML Safe ERB
+  http://stackoverflow.com/questions/4576932/ruby-on-rails-how-to-render-a-string-as-html
+
+Limit Number of Nested Resources Cocoon
+  http://stackoverflow.com/questions/12934925/cocoon-add-association-how-to-limit-number-of-associations
+
 
 
 

@@ -1,10 +1,13 @@
 <%= semantic_form_for @resume do |f| %>
 
-  <%= f.input :name %>
-  <%= f.input :email %>
-  <%= f.input :phone %>
-  <%= f.input :profile, as: :text, :input_html => {:class => 'autogrow', rows: 10, cols: 125, maxlength: 125} %>
+  <div id="resume_header">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :profile, as: :text, :input_html => {:class => 'autogrow', rows: 10, cols: 125, maxlength: 125} %>
+    </div>
   <div id="links">
+    <h1>Add Links</h1>
     <%= f.semantic_fields_for :links do |link| %>
       <%= render 'link_fields', f: link %>
     <% end %>

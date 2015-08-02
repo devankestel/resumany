@@ -1,6 +1,7 @@
 <div class="nested-fields">
   <%= f.inputs do %>
     <!-- Hidden field needed here to set category to "education" -->
+    <%= f.input :category, as: :hidden, :input_html => {value: "education"} %>
     <%= f.input :organization, label: "School" %>
     <%= f.input :title, label: "Degree(s)/Program(s)" %>
     <%= f.input :present, label: "Presently Attending" %>

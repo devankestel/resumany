@@ -28,3 +28,7 @@ body{
 #header_links{
   text-align: center;
 }
+
+#resume_header{
+  list-style-type: none;
+}

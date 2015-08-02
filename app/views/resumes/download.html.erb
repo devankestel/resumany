@@ -1,0 +1,7 @@
+<%= semantic_form_for @resume do |f| %>  
+  <%= f.input :resume_name, label: "Resume Tag" %>
+  <%= f.input :txt, as: :check_boxes, collection: ["txt", "pdf", "docx"] %>
+  <%= f.input :name, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
+  <!-- need another radio input for prose and bullets font -->
+  <%= f.actions %>
+<% end %>

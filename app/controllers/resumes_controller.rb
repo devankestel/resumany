@@ -27,6 +27,9 @@ class ResumesController < ApplicationController
 
   def create
   end
+  def download
+    @resume = Resume.new()
+  end
 
   private
 

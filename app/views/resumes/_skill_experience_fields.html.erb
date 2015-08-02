@@ -1,0 +1,22 @@
+<div class="nested-fields">
+  <%= f.inputs do %>
+    <!-- Hidden field needed here to set category to "skill" -->
+    <%= f.input :organization, label: "School" %>
+    <%= f.input :title, label: "Degree(s)/Program(s)" %>
+    <%= f.input :present, label: "Presently Attending" %>
+    <%= f.input :city %>
+    <%= f.input :state_or_country, as: :string %>
+    <%= f.input :end_month, as: :select, collection: Date::MONTHNAMES, label: "Graduation Month" %>
+    <%= f.input :end_year, as: :select, collection: @years, label: "Graduation Year" %>
+    <%= f.input :description, as: :text %>
+    <div id="demonstrations">
+      <%= f.semantic_fields_for :demonstrations do |demonstration| %>
+        <%= render 'demonstration_fields', f: demonstration %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add demonstration', f, :demonstrations %>
+      </div>
+    </div>
+    <%= link_to_remove_association "remove education", f %>
+  <% end %>
+</div>

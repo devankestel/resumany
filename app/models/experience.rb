@@ -15,8 +15,10 @@ class Experience < ActiveRecord::Base
 
   def category_name
     
-    if self.category == "education" || self.category == "skill"
+    if self.category == "education"
       self.category.humanize
+    elsif self.category == "skill"
+      self.category.humanize.pluralize
     else
       "#{self.category.humanize} Experience"
     end  

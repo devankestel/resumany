@@ -34,7 +34,7 @@ class ResumesController < ApplicationController
     @resume = Resume.find(1)
     @route = params[:id]
     @links = @resume.links.all
-    set_experiences(@resume, ["education", "paid", "skill"])
+    set_experiences(@resume, ["skill", "education", "paid"])
     #@educational_experiences = @resume.experiences.where(category: "education")
     #@paid_experiences = @resume.experiences.where(category: "paid")
     #@resume.write_txt(@route)

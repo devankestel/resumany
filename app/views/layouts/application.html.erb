@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<nav id="header_links">
+  <%= link_to "resuMANY logo", "/resumes/" %>
+  <%= link_to "CV", "/resumes/cv" %>
+  <!-- Only visible on /resumes/cv and /resumes/tags pages -->
+  <%= link_to "Download Link", "/resumes/" %>
+  <%= link_to "Re-Order Link", "/resumes/" %>
+  <%= link_to "Login", "/resumes/" %>
+</nav>
+<p></p>
 <%= yield %>
 
 </body>

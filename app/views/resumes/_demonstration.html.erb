@@ -1,5 +1,5 @@
 <% if demonstration.experience.category == "skill" %>
-  <li><%= demonstration.skill_display.html_safe %></li>
+  <li class="skill"><%= demonstration.skill_display.html_safe %></li>
 <% else %>
   <li><%= demonstration.description %></li>
 <% end %>

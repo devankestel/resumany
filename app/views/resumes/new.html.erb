@@ -30,6 +30,15 @@
       <%= link_to_add_association 'add education', f, :experiences, partial: 'educational_experience_fields' %>
     </div>
   </div>
+  <div id="skill_experiences">
+    <h1>Add Skills</h1>
+    <%= f.semantic_fields_for :experiences do |experience| %>
+      <%= render 'skill_experience_fields', f: experience %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add skill set', f, :experiences, partial: 'skill_experience_fields' %>
+    </div>
+  </div>
 
   <%= f.actions %>
 

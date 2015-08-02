@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/resumes/download' => 'resumes#download'
+  get '/resumes/download' => 'resumes#download', as: :downloads
   resources :resumes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

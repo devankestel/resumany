@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="375px" height="85px" viewBox="0 0 375 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>resuMANY_logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="resuMANY_logo" sketch:type="MSArtboardGroup">
+            <g id="resuMANY-logo" sketch:type="MSLayerGroup">
+                <g id="resu-+-MAN" font-size="72" sketch:type="MSTextLayer">
+                    <text id="resu" font-family="Helvetica" font-weight="normal" fill="#262626">
+                        <tspan x="0" y="69">resu</tspan>
+                    </text>
+                    <text id="MAN" fill="#3020DF" font-family="Nanum Gothic" font-weight="633">
+                        <tspan x="141" y="66">MAN</tspan>
+                    </text>
+                </g>
+                <g id="Forking-Y" transform="translate(316.000000, 16.000000)" fill="#2E1FD9" sketch:type="MSShapeGroup">
+                    <path d="M22.3867345,43.2706941 C22.3986882,42.1684776 23.307227,41.2749546 24.4055871,41.2749546 L29.1166307,41.2749546 C30.2196585,41.2749546 31.1223266,42.1754932 31.1326486,43.2706941 L31.2243849,53.0042606 C31.234773,54.106477 30.3489623,55 29.2494275,55 L24.2532948,55 C23.1521679,55 22.2692946,54.0994614 22.2811723,53.0042606 L22.3867345,43.2706941 Z" id="Rectangle-1" stroke="#2E1FD9"></path>
+                    <g id="Triangle-1-+-Path-1">
+                        <path d="M0.0110623469,0.0790738607 L19.2948657,5.24640793 L5.17839641,19.3628772 L0.0110623469,0.0790738607 L0.0110623469,0.0790738607 Z" id="Triangle-1" stroke="#2E1FD9"></path>
+                        <path d="M8.86727611,15.673261 L14.9895432,9.60577714 C14.9895432,9.60577714 22.3864945,13.4305613 27.1917226,23.1238746 C31.2743875,33.3603897 31.0369286,43.082703 31.0369286,43.082703 L22.4210509,43.082703 C22.4210509,43.082703 22.3864945,30.9633807 18.1797876,23.1238746 C14.2021636,16.0707804 8.86727611,15.673261 8.86727611,15.673261 Z" id="Path-1"></path>
+                    </g>
+                    <g id="Triangle-1-+-Path-1-Copy" transform="translate(37.931034, 21.560799) scale(-1, 1) translate(-37.931034, -21.560799) translate(22.359347, 0.000000)">
+                        <path d="M0.0110623469,0.0790738607 L19.2948657,5.24640793 L5.17839641,19.3628772 L0.0110623469,0.0790738607 L0.0110623469,0.0790738607 Z" id="Triangle-1" stroke="#2E1FD9"></path>
+                        <path d="M8.84524585,15.7309686 L14.8891398,9.70754523 C14.8891398,9.70754523 22.3864945,13.4305613 27.1917226,23.1238746 C31.2743875,33.3603897 31.0508681,43.0853836 31.0508681,43.0853836 L22.4397668,43.0853836 C22.4397668,43.0853836 22.3864945,30.9633807 18.1797876,23.1238746 C14.2021636,16.0707804 8.84524585,15.7309686 8.84524585,15.7309686 Z" id="Path-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

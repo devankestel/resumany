@@ -42,7 +42,7 @@ class ResumesController < ApplicationController
     #@paid_experiences = @resume.experiences.where(category: "paid")
     #@resume.write_txt(@route)
     #@resume.write_docx(@route)
-    #@resume.write_pdf(@route)
+    @resume.write_pdf(@route)
   end
 
   def set_experiences(resume, ordered_array)

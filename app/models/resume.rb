@@ -36,7 +36,7 @@ class Resume < ActiveRecord::Base
   def write_pdf(route)
     file = Prawn::Document.new
     header_pdf(file)
-    #experiences_pdf(file, route)
+    experiences_pdf(file, route)
     file.render_file "/Users/devankestel1/Documents/resumany/app/assets/pdf/name.pdf"
   end
 
@@ -51,6 +51,28 @@ class Resume < ActiveRecord::Base
       "#{link.title}: #{link.url}"
     end
     list_pdf(file, link_text)
+    file.text " "
+  end
+
+  def experiences_pdf(file, route)
+    self.experiences.each do |experience|
+      file.text experience.organization
+      file.text experience.title
+      file.text experience.daterange
+        if experience.description
+          file.text " "
+          file.text experience.description
+        end
+      demo_text = experience.selected_demos(route).map do |demo|
+        demo.description
+      end
+      if demo_text
+        file.text " "
+        file.text " "
+        list_pdf(file, demo_text)
+        end
+      file.text " "
+    end
   end  
   
   def header_docx(file)
@@ -101,10 +123,11 @@ class Resume < ActiveRecord::Base
           if demos
             par.text ""
             par.newline
+            demos = false
           end
           par.text "• #{demo.description}"
           par.newline
-          demos = false  
+          
         end
       end
     end
@@ -143,8 +166,8 @@ class Resume < ActiveRecord::Base
   end
 
   def list_pdf(file, items)
-      rhythm  = 10
-      leading = 2
+      rhythm  = 5
+      leading = 1
       black = "000000"
       file.move_up(rhythm)
 

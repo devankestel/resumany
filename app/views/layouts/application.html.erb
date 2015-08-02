@@ -7,16 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav id="header_links">
-  <%= link_to "resuMANY logo", "/resumes/" %>
-  <%= link_to "CV", "/resumes/cv" %>
-  <!-- Only visible on /resumes/cv and /resumes/tags pages -->
-  <%= link_to "Download Link", "/resumes/" %>
-  <%= link_to "Re-Order Link", "/resumes/" %>
-  <%= link_to "Login", "/resumes/" %>
+<nav id="nav_links">
+  <div id="left_nav" class="item">
+    <%= link_to image_tag("resuMANY_logo.png", :class => "logo"), "/resumes/" %>
+  </div>
+  <div id="center_nav" class="item">
+    <%= link_to "CV", "/resumes/cv" %>
+    <!-- Only visible on /resumes/cv and /resumes/tags pages -->
+    <%= link_to "Download Link", downloads_path %>
+    <%= link_to "Re-Order Link", "/resumes/" %>
+  </div>
+  <div id="right_nav" class="item">
+    <%= link_to "Login", "/resumes/" %>
+  </div>
+  <div id="right_pad" class="item"></div>
 </nav>
-<p></p>
-<%= yield %>
-
+<div id="yield_container">
+  <%= yield %>
+</div>
 </body>
 </html>

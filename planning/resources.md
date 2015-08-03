@@ -201,6 +201,57 @@ Cask Fonts!
 Permit Nested Attributes
   http://stackoverflow.com/questions/17436264/how-to-use-rails-4-strong-parameters-with-has-many-through-association
 
+  quote_item_quote_options_attributes: [:attribute, :list]
+
+class Project < ActiveRecord::Base
+  has_many :tasks
+  has_many :people
+  belongs_to :owner, :class_name => 'Person'
+
+  has_many :project_tags
+  has_many :tags, :through => :project_tags, :class_name => 'Tag'
+
+  accepts_nested_attributes_for :tasks, :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :people, :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :owner, :reject_if => :all_blank
+  accepts_nested_attributes_for :tags
+  accepts_nested_attributes_for :project_tags, :allow_destroy => true
+end
+
+class ProjectTag < ActiveRecord::Base
+  belongs_to :tag
+  belongs_to :project
+
+  accepts_nested_attributes_for :tag, :reject_if => :all_blank
+end
+
+class Tag < ActiveRecord::Base
+
+end
+
+class Task < ActiveRecord::Base
+  has_many :sub_tasks
+  accepts_nested_attributes_for :sub_tasks, :reject_if => :all_blank, :allow_destroy => true
+end
+
+class SubTask < ActiveRecord::Base
+  belongs_to :task
+end
+
+def project_params
+    params.require(:project).permit(
+        :name, :description, :owner_id,
+        tasks_attributes: [:id, :_destroy, :name, :description, sub_tasks_attributes: [:id, :_destroy, :name, :description] ],
+        people_attributes: [:id, :name, :role, :description, :_destroy],
+        owner_attributes: [:id, :name, :role, :description, :_destroy],
+        project_tags_attributes: [:id, :_destroy, :tag_id, tag_attributes: [:id, :_destroy, :name]]
+    )
+end
+
+Params Override
+  http://apidock.com/rails/ActiveRecord/Base/to_param
+
+
 
 
 

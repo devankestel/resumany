@@ -4,7 +4,11 @@ class CreateDownloads < ActiveRecord::Migration
       t.string :route
       t.string :header_font
       t.string :prose_font
+      t.boolean :pdf, default: false
+      t.boolean :docx, default: false
+      t.boolean :txt, default: false
       t.integer :resume_id
+
 
       t.timestamps null: false
     end

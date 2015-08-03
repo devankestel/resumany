@@ -17,6 +17,6 @@ class DownloadsController < ApplicationController
   private
 
   def download_params
-     params.require(:download).permit(:route, :header_font, :prose_font, filetype_attributes: [:category])
+     params.require(:download).permit(:route, :header_font, :prose_font, :pdf, :txt, :docx)
   end
 end

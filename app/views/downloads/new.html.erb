@@ -4,7 +4,9 @@
       <%= f.input :header_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
       <%= f.input :prose_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
       <%= f.input :route, label: "Resume Tag", :input_html => {value: "Tag Name Here"} %>    
-      <%= f.input :category, as: :check_boxes, :for => :filetype, collection: ["txt", "pdf", "docx"] %>
+      <%= f.input :pdf %>
+      <%= f.input :docx %>
+      <%= f.input :txt %>
       <%= f.actions %>
 
     <% end %>

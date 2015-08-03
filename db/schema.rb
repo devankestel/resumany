@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150802164226) do
+ActiveRecord::Schema.define(version: 20150802164207) do
 
   create_table "demonstrations", force: :cascade do |t|
     t.string   "description"
@@ -29,9 +29,12 @@ ActiveRecord::Schema.define(version: 20150802164226) do
     t.string   "route"
     t.string   "header_font"
     t.string   "prose_font"
+    t.boolean  "pdf",         default: false
+    t.boolean  "docx",        default: false
+    t.boolean  "txt",         default: false
     t.integer  "resume_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -49,13 +52,6 @@ ActiveRecord::Schema.define(version: 20150802164226) do
     t.integer  "resume_id"
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-  end
-
-  create_table "filetypes", force: :cascade do |t|
-    t.string   "category"
-    t.integer  "download_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "links", force: :cascade do |t|

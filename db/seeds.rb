@@ -32,6 +32,7 @@ Resume.destroy_all
 Link.destroy_all
 Experience.destroy_all
 Demonstration.destroy_all
+Download.destroy_all
 
 seed_txt = File.open('/Users/devankestel1/Documents/resumany/app/assets/txt/seed.txt')
 seed_pdf = File.open('/Users/devankestel1/Documents/resumany/app/assets/pdf/seed.pdf')

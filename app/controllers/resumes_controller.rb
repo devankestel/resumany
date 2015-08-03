@@ -33,6 +33,10 @@ class ResumesController < ApplicationController
 
   private
 
+  # def download_params
+  #   params.require(:download).permit(:route, :header_font, :prose_font, :filetype_attributes[:category])
+  # end
+
   def set_instances
     @resume = Resume.find(1)
     @route = params[:id]

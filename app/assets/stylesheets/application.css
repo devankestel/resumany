@@ -67,11 +67,11 @@ a{
 }
 
 
-/*#yield_container{
+#yield_container{
   padding-left: 10%;
   padding-right: 10%;
   
-}*/
+}
 #resume_header{
   list-style-type: none;
 }

@@ -59,3 +59,12 @@ June 2004 - August 2006
   * Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.
   * Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.
 
+
+
+
+
+  * Ruby, Rails, JS, HTML5, CSS3, MATLAB, C++, Python
+  * Here is where I talk about all the fancy Codeschool courses I took and badges I earned. In paragraph format. So this has to be long like sentences and stuff. There you go.
+  * Certified Beer Server, RABSQA Lead Internal Quality Auditor, Six Sigma Greenbelt
+  * Here is where I blather about my fancy study abroad in Madrid that lasted six months where I took lots of courses and did lots of things. Fluency in a foreign language is cool and should count for something.
+

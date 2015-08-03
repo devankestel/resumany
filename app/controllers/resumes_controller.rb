@@ -26,6 +26,8 @@ class ResumesController < ApplicationController
   end
 
   def create
+    @resume = Resume.create(resume_params)
+    redirect_to resume_path(@resume)
   end
   def download
     @download = Download.new()
@@ -38,7 +40,7 @@ class ResumesController < ApplicationController
   # end
 
   def set_instances
-    @resume = Resume.find(1)
+    @resume = Resume.find(params[:id])
     @route = params[:id]
     @links = @resume.links.all
     set_experiences(@resume, ["skill", "education", "paid"])
@@ -57,6 +59,8 @@ class ResumesController < ApplicationController
     end
     @experiences_collections
   end
-
+  def resume_params
+     params.require(:resume).permit(:name, :profile, :email, :phone)
+  end
 end
 

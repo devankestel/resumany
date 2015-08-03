@@ -4,7 +4,9 @@
 <!--#Display Experiences Partial Collection-->
 
 <% @experiences_collections.each do |collection| %>
-  <h2><%= collection.first.category_name %></h2>
-  <%= render partial: "experience", collection: collection %>
+  <% if collection.first %>
+    <h2><%= collection.first.category_name %></h2>
+    <%= render partial: "experience", collection: collection %>
+  <% end %>
 <% end %>
 

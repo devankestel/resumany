@@ -3,7 +3,7 @@
     <%= semantic_form_for [@resume, @download] do |f| %>  
       <%= f.input :header_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
       <%= f.input :prose_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
-      <%= f.input :route, label: "Resume Tag", :input_html => {value: "Tag Name Here"} %>    
+      <%= f.input :route, label: "Resume Tag" %>    
       <%= f.input :pdf %>
       <%= f.input :docx %>
       <%= f.input :txt %>

@@ -23,6 +23,27 @@ class DownloadsController < ApplicationController
     @download = Download.find(params[:id])
   end
 
+  def edit
+    @resume = Resume.find(params[:resume_id])
+    @download = @resume.downloads.find(params[:id])
+    render 'new'
+  end
+
+  def update
+    @resume = Resume.find(params[:resume_id])
+    @download = @resume.downloads.create(download_params)
+    if @download.pdf
+      @resume.write_pdf(@download.route)
+    end
+    if @download.txt
+      @resume.write_txt(@download.route)
+    end
+    if @download.docx
+      @resume.write_docx(@download.route)
+    end
+    redirect_to resume_download_path(@resume, @download)
+  end
+
   private
 
   def download_params

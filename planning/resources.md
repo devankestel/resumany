@@ -251,6 +251,9 @@ end
 Params Override
   http://apidock.com/rails/ActiveRecord/Base/to_param
 
+Builder.object
+  http://stackoverflow.com/questions/5038341/rails-using-form-for-and-fields-for-how-do-you-access-the-sub-object-while-in
+
 
 
 

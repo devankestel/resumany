@@ -25,10 +25,25 @@ class ResumesController < ApplicationController
     @years = (1900..2015).to_a.reverse!
   end
 
+  def edit
+    set_instances
+    @years = (1900..2015).to_a.reverse!
+    @editing = true
+    render 'new'
+  end
+
   def create
     @resume = Resume.create(resume_params)
     redirect_to resume_path(@resume)
   end
+
+  def update
+    @resume = Resume.find(params[:id])
+    @resume.update(resume_params)
+    set_instances
+    render 'show'
+  end
+
   def download
     @download = Download.new()
   end

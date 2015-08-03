@@ -19,7 +19,10 @@
     <div id="experiences">
       <h1>Add Experience</h1>
       <%= f.semantic_fields_for :experiences do |experience| %>
-        <%= render 'experience_fields', f: experience %>
+        <!-- if editing and experience.category paid or unpaid or volunteer -->
+        <% if @editing && experience.object.category == "unpaid" %>
+          <%= render 'experience_fields', f: experience %>
+        <% end %>
       <% end %>
       <div class="links">
         <%= link_to_add_association 'add experience', f, :experiences %>
@@ -28,7 +31,10 @@
     <div id="educational_experiences">
       <h1>Add Education</h1>
       <%= f.semantic_fields_for :experiences do |experience| %>
-        <%= render 'educational_experience_fields', f: experience %>
+        <!-- if editing and if experience.category education -->
+        <% if @editing && experience.object.category == "education" %>
+          <%= render 'educational_experience_fields', f: experience %>
+        <% end %>
       <% end %>
       <div class="links">
         <%= link_to_add_association 'add education', f, :experiences, partial: 'educational_experience_fields' %>
@@ -37,7 +43,10 @@
     <div id="skill_experiences">
       <h1>Add Skills</h1>
       <%= f.semantic_fields_for :experiences do |experience| %>
-        <%= render 'skill_experience_fields', f: experience %>
+        <!-- if editing and if experience.category skill -->
+        <% if @editing && experience.object.category == "skill" %>
+          <%= render 'skill_experience_fields', f: experience %>
+        <% end %>
       <% end %>
       <div class="links">
         <%= link_to_add_association 'add skill set', f, :experiences, partial: 'skill_experience_fields' %>

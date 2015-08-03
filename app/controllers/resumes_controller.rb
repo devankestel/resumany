@@ -60,7 +60,9 @@ class ResumesController < ApplicationController
     @experiences_collections
   end
   def resume_params
-     params.require(:resume).permit(:name, :profile, :email, :phone, links_attributes: [:title, :url])
+     params.require(:resume).permit(:name, :profile, :email, :phone, 
+                                    links_attributes: [:title, :url], 
+                                    experiences_attributes: [:title, :description, :organization, :start_month, :star_year, :end_month, :end_year, :category, :city, :state_or_country, :present])
   end
   
 end

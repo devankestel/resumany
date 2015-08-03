@@ -21,12 +21,17 @@ body{
   font-family: "Helvetica";
   color: hsla(45, 0%, 15%, 1);
 }
+a{
+  font-family: "Helvetica";
+  color: hsla(245, 75%, 50%, 0.85);
+  text-decoration: none;
+}
 .skill{
   list-style-type: none;
 }
 
 
-nav{
+.line{
   float: left;
   width: 100%;
   display: block;
@@ -45,15 +50,15 @@ nav{
   padding-left: 2.5%;
 }
 #center_nav{
+  padding-top: 1%;
   margin-left: -66.66%;
-  width: 33.33;
+  width: 40%;
   text-align: center;
-  padding-left: 5%;
 }
 
 #right_nav{
-  margin-left: -33.33%;
-  width: 28.33%;
+  margin-left: -26.67%;
+  width: 18.33%;
   text-align: right;
 }
 #right_pad{
@@ -61,14 +66,31 @@ nav{
   width: 5%;
 }
 
-#yield_container{
+
+/*#yield_container{
   padding-left: 10%;
-}
+  padding-right: 10%;
+  
+}*/
 #resume_header{
+  list-style-type: none;
+}
+
+#download_form{
   list-style-type: none;
 }
 
 .logo{
   width: 75%;
   height: 75%;
+}
+
+.icon{
+  width: 10%;
+  height: 10%;
+}
+
+.cv_icon{
+  height: 15%;
+  width: 15%;
 }

@@ -1,9 +1,12 @@
-<div id = "download_form">
-  <%= semantic_form_for @download do |f| %>  
-    <%= f.input :route, label: "Resume Tag", :input_html => {value: "Tag Name Here"} %>
-    <%= f.input :category, as: :check_boxes, :for => :filetype, collection: ["txt", "pdf", "docx"] %>
-    <%= f.input :header_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
-    <%= f.input :prose_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
-    <%= f.actions %>
-  <% end %>
+<div id="formtastic_container" class="line">
+  <div id = "download_form">
+    <%= semantic_form_for @download do |f| %>  
+      <%= f.input :header_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
+      <%= f.input :prose_font, as: :radio, collection: ["Helvetica", "Trebuchet MS", "Etc"] %>
+      <%= f.input :route, label: "Resume Tag", :input_html => {value: "Tag Name Here"} %>    
+      <%= f.input :category, as: :check_boxes, :for => :filetype, collection: ["txt", "pdf", "docx"] %>
+      <%= f.actions %>
+
+    <% end %>
+  </div>
 </div>

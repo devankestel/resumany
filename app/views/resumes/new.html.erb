@@ -1,48 +1,51 @@
-<%= semantic_form_for @resume do |f| %>
+<div id="formtastic_container" class="line" >
+  <%= semantic_form_for @resume do |f| %>
+    
+    <div id="resume_header">
+      <%= f.input :name %>
+      <%= f.input :email %>
+      <%= f.input :phone %>
+      <%= f.input :profile, as: :text, :input_html => {:class => 'autogrow', rows: 10, cols: 125, maxlength: 125} %>
+      </div>
+    <div id="links">
+      <h1>Add Links</h1>
+      <%= f.semantic_fields_for :links do |link| %>
+        <%= render 'link_fields', f: link %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add link', f, :links %>
+      </div>
+    </div>
+    <div id="experiences">
+      <h1>Add Experience</h1>
+      <%= f.semantic_fields_for :experiences do |experience| %>
+        <%= render 'experience_fields', f: experience %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add experience', f, :experiences %>
+      </div>
+    </div>
+    <div id="educational_experiences">
+      <h1>Add Education</h1>
+      <%= f.semantic_fields_for :experiences do |experience| %>
+        <%= render 'educational_experience_fields', f: experience %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add education', f, :experiences, partial: 'educational_experience_fields' %>
+      </div>
+    </div>
+    <div id="skill_experiences">
+      <h1>Add Skills</h1>
+      <%= f.semantic_fields_for :experiences do |experience| %>
+        <%= render 'skill_experience_fields', f: experience %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add skill set', f, :experiences, partial: 'skill_experience_fields' %>
+      </div>
+    </div>
 
-  <div id="resume_header">
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-    <%= f.input :profile, as: :text, :input_html => {:class => 'autogrow', rows: 10, cols: 125, maxlength: 125} %>
-    </div>
-  <div id="links">
-    <h1>Add Links</h1>
-    <%= f.semantic_fields_for :links do |link| %>
-      <%= render 'link_fields', f: link %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add link', f, :links %>
-    </div>
-  </div>
-  <div id="experiences">
-    <h1>Add Experience</h1>
-    <%= f.semantic_fields_for :experiences do |experience| %>
-      <%= render 'experience_fields', f: experience %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add experience', f, :experiences %>
-    </div>
-  </div>
-  <div id="educational_experiences">
-    <h1>Add Education</h1>
-    <%= f.semantic_fields_for :experiences do |experience| %>
-      <%= render 'educational_experience_fields', f: experience %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add education', f, :experiences, partial: 'educational_experience_fields' %>
-    </div>
-  </div>
-  <div id="skill_experiences">
-    <h1>Add Skills</h1>
-    <%= f.semantic_fields_for :experiences do |experience| %>
-      <%= render 'skill_experience_fields', f: experience %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add skill set', f, :experiences, partial: 'skill_experience_fields' %>
-    </div>
-  </div>
 
-  <%= f.actions %>
+    <%= f.actions %>
 
-<% end %>
+  <% end %>
+</div>

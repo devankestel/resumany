@@ -20,7 +20,7 @@
       <h1>Add Experience</h1>
       <%= f.semantic_fields_for :experiences do |experience| %>
         <!-- if editing and experience.category paid or unpaid or volunteer -->
-        <% if @editing %>
+        <% if @editing && experience.object.category == "paid" %>
           <%= render 'experience_fields', f: experience %>
         <% end %>
       <% end %>

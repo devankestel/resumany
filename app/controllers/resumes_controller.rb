@@ -39,7 +39,7 @@ class ResumesController < ApplicationController
 
   def update
     @resume = Resume.find(params[:id])
-    @resume.update(resume_params)
+    @resume.update_attributes(resume_params)
     set_instances
     render 'show'
   end
@@ -75,8 +75,8 @@ class ResumesController < ApplicationController
     @experiences_collections
   end
   def resume_params
-     params.require(:resume).permit(:name, :profile, :email, :phone, 
-                                    links_attributes: [:title, :url], 
+     params.require(:resume).permit(:id, :name, :profile, :email, :phone, 
+                                    links_attributes: [:id, :title, :url, :resume_id], 
                                     experiences_attributes: [:title, :description, :organization, :start_month, :star_year, :end_month, :end_year, :category, :city, :state_or_country, :present, demonstrations_attributes: [:description, :core, :subset, :category, :display]]
                                     )
   end

@@ -5,7 +5,6 @@ class Resume < ActiveRecord::Base
   has_many :experiences
   has_many :links
   has_many :downloads
-  has_many :filetypes, through: :downloads
   has_many :demonstrations, through: :experiences
 
   accepts_nested_attributes_for :links, allow_destroy: true

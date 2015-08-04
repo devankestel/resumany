@@ -12,7 +12,19 @@ Paperclip Gem
     https://github.com/thoughtbot/paperclip
   
   Video Tutorial by Mackenzie Child (10 minutes)
-    https://www.youtube.com/watch?v=Z5W-Y3aROVE    
+    https://www.youtube.com/watch?v=Z5W-Y3aROVE
+
+  Attach in teh Ruby (as opposed to via Web Form)
+
+    my_model_instance = MyModel.new
+    file = File.open(file_path)
+    my_model_instance.attachment = file
+    file.close
+    my_model_instance.save!
+
+  Link for teh Download
+
+    <%= link_to "Download", model.avatar.url(:original, false) %>    
 
 PDF, docx, txt Generation
 
@@ -255,6 +267,12 @@ Builder.object
   http://stackoverflow.com/questions/5038341/rails-using-form-for-and-fields-for-how-do-you-access-the-sub-object-while-in
 
 
+Docx unordered list
+  <text: unordered-list>
+pg 131 open office spec
 
+Docx paragraph text
+  <text: paragraph>
 
+pg 
 

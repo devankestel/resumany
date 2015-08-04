@@ -2,6 +2,6 @@
 <p><%= @download.prose_font %></p>
 <p><%= @download.route %></p>
 
-<p>pdf: <%= @download.pdf %></p>
-<p>txt: <%= @download.txt %></p>
-<p>docx: <%= @download.docx %></p>
+<p>pdf: <%= link_to "Download PDF", @resume.pdf.url(:original, false) %></p>
+<p>txt: <%= link_to "Download Text File", @resume.txt.url(:original, false) %></p>
+<p>docx: <%= link_to "Download Word Doc", @resume.docx.url(:original, false) %></p>

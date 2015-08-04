@@ -20,27 +20,49 @@ class Resume < ActiveRecord::Base
   validates_attachment_content_type :docx, :content_type =>['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
   validates_attachment_content_type :txt, :content_type =>['text/plain']
 
-  def write_docx(route)
-    DocxGenerator::DSL::Document.new("/Users/devankestel1/Documents/resumany/app/assets/docx/name") do |file|
+  # my_model_instance = MyModel.new
+  # file = File.open(file_path)
+  # my_model_instance.attachment = file
+  # file.close
+  # my_model_instance.save!
+
+  def write_and_attach_docx(route)
+    DocxGenerator::DSL::Document.new("/Users/devankestel1/Documents/resumany/app/assets/docx/#{route}") do |file|
       header_docx(file)
       experiences_docx(file, route)
       file.save
     end
+    
+    attach_docx = File.open("/Users/devankestel1/Documents/resumany/app/assets/docx/#{route}.docx")
+    self.docx = attach_docx
+    self.save!
+    attach_docx.close
+
   end
 
-  def write_txt(route)
+  def write_and_attach_txt(route)
     # /Users/devankestel1/Documents/resumany/app/assets/txt/name.txt
-    File.open("/Users/devankestel1/Documents/resumany/app/assets/txt/name.txt", 'w') do |file| 
+    File.open("/Users/devankestel1/Documents/resumany/app/assets/txt/#{route}.txt", 'w') do |file| 
       header_txt(file)
       experiences_txt(file, route) 
     end
+    attach_txt = File.open("/Users/devankestel1/Documents/resumany/app/assets/txt/#{route}.txt")
+    self.txt = attach_txt
+    self.save!
+    attach_txt.close
   end
 
-  def write_pdf(route)
+  def write_and_attach_pdf(route)
     file = Prawn::Document.new
     header_pdf(file)
     experiences_pdf(file, route)
-    file.render_file "/Users/devankestel1/Documents/resumany/app/assets/pdf/name.pdf"
+    file.render_file "/Users/devankestel1/Documents/resumany/app/assets/pdf/#{route}.pdf"
+    
+    attach_pdf = File.open("/Users/devankestel1/Documents/resumany/app/assets/pdf/#{route}.pdf")
+    self.pdf = attach_pdf
+    self.save!
+    attach_pdf.close
+
   end
 
   def header_pdf(file)

@@ -7,7 +7,7 @@ class Demonstration < ActiveRecord::Base
       "<em>#{subset}</em>: #{description}"
     else
       #need to make this a multi-line response somehow
-      "#{subset}<br /><br />#{description}"
+      "<br />#{subset}<br /><br />#{description}"
     end
   end
 end

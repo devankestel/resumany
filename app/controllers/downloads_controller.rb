@@ -7,20 +7,13 @@ class DownloadsController < ApplicationController
   def create
     @resume = Resume.find(params[:resume_id])
     @download = @resume.downloads.create(download_params)
-    if @download.pdf
-      @resume.write_pdf(@download.route)
-    end
-    if @download.txt
-      @resume.write_txt(@download.route)
-    end
-    if @download.docx
-      @resume.write_docx(@download.route)
-    end
+    write_and_attach_files(@download, @resume)
     redirect_to resume_download_path(@resume, @download)
   end
   
   def show
     @download = Download.find(params[:id])
+    @resume = Resume.find(params[:resume_id])
   end
 
   def edit
@@ -31,22 +24,26 @@ class DownloadsController < ApplicationController
 
   def update
     @resume = Resume.find(params[:resume_id])
-    @download = @resume.downloads.create(download_params)
-    if @download.pdf
-      @resume.write_pdf(@download.route)
-    end
-    if @download.txt
-      @resume.write_txt(@download.route)
-    end
-    if @download.docx
-      @resume.write_docx(@download.route)
-    end
+    @download = @resume.downloads.update(download_params)
+    write_and_attach_files(@download, @resume)
     redirect_to resume_download_path(@resume, @download)
   end
 
   private
 
+  def write_and_attach_files(download, resume)
+    if download.pdf
+      resume.write_and_attach_pdf(download.route)
+    end
+    if download.txt
+      resume.write_and_attach_txt(download.route)
+    end
+    if download.docx
+      resume.write_and_attach_docx(download.route)
+    end
+  end
+
   def download_params
-     params.require(:download).permit(:route, :header_font, :prose_font, :pdf, :txt, :docx)
+     params.require(:download).permit(:id, :resume_id, :route, :header_font, :prose_font, :pdf, :txt, :docx)
   end
 end

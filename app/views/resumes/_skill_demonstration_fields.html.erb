@@ -3,7 +3,7 @@
     <%= f.input :display, as: :radio, collection: ["list", "paragraph"] %>
     <%= f.input :core, as: :boolean, :label => "Keep in all resumes?" %>
     <%= f.input :description %>
-    <%= f.input :tag_list, label: "Tags" %>
+    <%= f.input :tag_list, label: "Tags", :input_html => {value: f.object.tag_list.to_s} %>
     <%= link_to_remove_association "remove demonstration", f %>
   <% end %>
 </div>

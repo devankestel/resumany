@@ -2,14 +2,19 @@ require 'docx_generator'
 require 'prawn'
 
 class Resume < ActiveRecord::Base
+
   has_many :experiences
   has_many :links
   has_many :downloads
+  has_many :displays
   has_many :demonstrations, through: :experiences
 
   accepts_nested_attributes_for :links, allow_destroy: true
   accepts_nested_attributes_for :experiences, allow_destroy: true
   accepts_nested_attributes_for :demonstrations
+  accepts_nested_attributes_for :downloads
+  accepts_nested_attributes_for :displays
+
   #accepts_nested_attributes_for :experience_demonstrations, allow_destroy: true
 
   has_attached_file :pdf 

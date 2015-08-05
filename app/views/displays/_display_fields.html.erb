@@ -1,0 +1,6 @@
+<div class="nested-fields">
+  <%= f.inputs do %>
+      <%= f.input :placement, :label => f.object.category, collection: (1..@displays.count).to_a %>
+    <%= link_to_remove_association "remove display", f %>
+  <% end %>
+</div>

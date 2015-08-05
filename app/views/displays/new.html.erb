@@ -1,0 +1,15 @@
+<div id="formtastic_container" class="line">
+  <div id = "download_form">
+    <%= semantic_form_for [@resume] do |f| %>  
+      <%= f.semantic_fields_for :displays do |display| %>
+        <%= render 'display_fields', f: display %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'add display', f, :displays %>
+      </div>
+
+      <%= f.input :placement, as: :select, collection: (1..@display.count).to_a %>
+      <%= f.actions %>
+    <% end %>
+  </div>
+</div>

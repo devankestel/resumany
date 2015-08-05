@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/resumes/download' => 'resumes#download', as: :downloads
   resources :resumes do
     resources :downloads
+    resources :displays
   end
 
 #                 Prefix Verb   URI Pattern                                      Controller#Action

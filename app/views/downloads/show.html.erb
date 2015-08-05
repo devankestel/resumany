@@ -1,7 +1,15 @@
-<p><%= @download.header_font %></p>
-<p><%= @download.prose_font %></p>
-<p><%= @download.route %></p>
+<% if @download.route == "cv" %>
+  <p>The files for your entire <%= @download.route %> are ready.</p>
+<% else %>
+  <p>The files for your tagged resume: <%= @download.route %>, are ready.</p>
+<% end %>
 
-<p>pdf: <%= link_to "Download PDF", @resume.pdf.url(:original, false) %></p>
-<p>txt: <%= link_to "Download Text File", @resume.txt.url(:original, false) %></p>
-<p>docx: <%= link_to "Download Word Doc", @resume.docx.url(:original, false) %></p>
+<% if @download.pdf %>
+  <p>pdf: <%= link_to "Download PDF", @resume.pdf.url(:original, false) %></p>
+<% end %>
+<% if @download.txt %>
+  <p>txt: <%= link_to "Download Text File", @resume.txt.url(:original, false) %></p>
+<% end %>
+<% if @download.docx %>
+  <p>docx: <%= link_to "Download Word Doc", @resume.docx.url(:original, false) %></p>
+<% end %>

@@ -24,12 +24,20 @@ class DownloadsController < ApplicationController
 
   def update
     @resume = Resume.find(params[:resume_id])
-    @download = @resume.downloads.update(download_params)
+    @download = Download.find(params[:id])
+    @download.update_attributes(download_params)
+    destroy_currently_attached_files(@resume)
     write_and_attach_files(@download, @resume)
     redirect_to resume_download_path(@resume, @download)
   end
 
   private
+
+  def destroy_currently_attached_files(resume)
+    resume.pdf.destroy
+    resume.txt.destroy
+    resume.docx.destroy
+  end
 
   def write_and_attach_files(download, resume)
     if download.pdf

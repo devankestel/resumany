@@ -36,7 +36,7 @@ class ResumesController < ApplicationController
     @resume = Resume.create(resume_params)
     @resume.displays.create(category: "skill", placement: 1)
     @resume.displays.create(category: "education", placement: 2)
-    @resume.displays.create(category: "bonanza", placement: 3)
+    @resume.displays.create(category: "paid", placement: 3)
 
     redirect_to resume_path(@resume)
   end
@@ -62,7 +62,8 @@ class ResumesController < ApplicationController
     @resume = Resume.find(params[:id])
     @route = params[:id]
     @links = @resume.links.all
-    set_experiences(@resume, ["skill", "education", "paid"])
+    ordered_array = @resume.displays.map{|display| display.category}
+    set_experiences(@resume, ordered_array)
     #@educational_experiences = @resume.experiences.where(category: "education")
     #@paid_experiences = @resume.experiences.where(category: "paid")
     #@resume.write_txt(@route)

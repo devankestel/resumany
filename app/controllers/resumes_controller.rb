@@ -34,9 +34,12 @@ class ResumesController < ApplicationController
 
   def create
     @resume = Resume.create(resume_params)
-    @resume.displays.create(category: "skill", placement: 1)
-    @resume.displays.create(category: "education", placement: 2)
-    @resume.displays.create(category: "paid", placement: 3)
+    unique_categories = @resume.experiences.map{|experience| experience.category}.uniq
+    puts unique_categories
+    set_default_display_order(@resume, unique_categories)
+    #@resume.displays.create(category: "skill", placement: 1)
+    #@resume.displays.create(category: "education", placement: 2)
+    #@resume.displays.create(category: "paid", placement: 3)
 
     redirect_to resume_path(@resume)
   end
@@ -78,6 +81,29 @@ class ResumesController < ApplicationController
       @experiences_collections << collection
     end
     @experiences_collections
+  end
+  def set_default_display_order(resume, categories)
+    ordered_categories = []
+    if categories.include?("skill")
+      ordered_categories << "skill"
+    end
+    if categories.include?("education")
+      ordered_categories << "education"
+    end
+    if categories.include?("paid")
+      ordered_categories << "paid"
+    end
+    if categories.include?("unpaid")
+      ordered_categories << "unpaid"
+    end
+    if categories.include?("volunteer")
+      ordered_categories << "volunteer"
+    end
+    puts ordered_categories 
+    ordered_categories.each do |category|
+      placement = ordered_categories.index(category) + 1
+      resume.displays.create(category: category, placement: placement)
+    end  
   end
   def resume_params
      params.require(:resume).permit(:id, :name, :profile, :email, :phone, 

@@ -1,6 +1,6 @@
 <div class="nested-fields">
   <%= f.inputs do %>
-    <%= f.input :core, as: :hidden, :input_html => {value: true} %>
+    <%= f.input :core, as: :boolean, :label => "Keep in all resumes?" %>
     <%= f.input :description %>
     <%= f.input :tag_list, label: "Tags" %>
     <%= link_to_remove_association "remove demonstration", f %>

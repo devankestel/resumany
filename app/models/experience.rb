@@ -6,9 +6,9 @@ class Experience < ActiveRecord::Base
 
   def daterange
     if self.start_year
-      "#{Date::MONTHNAMES[self.start_month]} #{self.start_year} - #{Date::MONTHNAMES[self.end_month]} #{self.end_year}"
+      "#{self.start_month} #{self.start_year} - #{self.end_month} #{self.end_year}"
     elsif self.end_year
-      "#{Date::MONTHNAMES[self.end_month]} #{self.end_year}"
+      "#{self.end_month} #{self.end_year}"
     else
     end
   end

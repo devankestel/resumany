@@ -4,9 +4,9 @@ class CreateExperiences < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.string :organization
-      t.integer :start_month
+      t.string :start_month
       t.integer :start_year
-      t.integer :end_month
+      t.string :end_month
       t.integer :end_year
       t.string :category
       t.string :city

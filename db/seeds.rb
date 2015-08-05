@@ -105,7 +105,7 @@ iron_yard = my_resume.experiences.create!(title: "Rails Engineering",
                                              state_or_country: "FL",
                                              category: "education",
                                              present: true,
-                                             end_month: 8,
+                                             end_month: "August",
                                              end_year: 2015)
 
 notre_dame = my_resume.experiences.create!(title: "M.S. in Chemical and Biomolecular Engineering",
@@ -115,7 +115,7 @@ notre_dame = my_resume.experiences.create!(title: "M.S. in Chemical and Biomolec
                                              category: "education",
                                              description: "Thermodynamic Research of Ionic Liquids Group (ThRILs)
                                              Adviser: Dr. Joan Brennecke",
-                                             end_month: 5,
+                                             end_month: "May",
                                              end_year: 2010)
 mit = my_resume.experiences.create!(title: "B.S. in Chemical Engineering, minor in Spanish",
                                              organization: "Massachusetts Institute of Technology",
@@ -123,7 +123,7 @@ mit = my_resume.experiences.create!(title: "B.S. in Chemical Engineering, minor 
                                              state_or_country: "MA",
                                              category: "education",
                                              description: "All chemical engineering courses relied heavily upon MATLAB and data science principles. Other relevant course: Intro to Python.",
-                                             end_month: 6,
+                                             end_month: "June",
                                              end_year: 2007)
 
 axalta = my_resume.experiences.create!(title: "Senior Chemical Engineer",
@@ -132,9 +132,9 @@ axalta = my_resume.experiences.create!(title: "Senior Chemical Engineer",
                                              city: "Mt. Clemens",
                                              state_or_country: "MI",
                                              category: "paid",
-                                             start_month: 2,
+                                             start_month: "February",
                                              start_year: 2011,
-                                             end_month: 4,
+                                             end_month: "April",
                                              end_year: 2015)
 
 nd_research = my_resume.experiences.create!(title: "Graduate Research Assistant",
@@ -142,9 +142,9 @@ nd_research = my_resume.experiences.create!(title: "Graduate Research Assistant"
                                              city: "Notre Dame",
                                              state_or_country: "IN",
                                              category: "paid",
-                                             start_month: 10,
+                                             start_month: "October",
                                              start_year: 2007,
-                                             end_month: 3,
+                                             end_month: "March",
                                              end_year: 2010)
 
 alltech = my_resume.experiences.create!(title: "Chemical Engineering Intern",
@@ -152,12 +152,16 @@ alltech = my_resume.experiences.create!(title: "Chemical Engineering Intern",
                                              city: "Nicholasville",
                                              state_or_country: "KY",
                                              category: "paid",
-                                             start_month: 6,
+                                             start_month: "June",
                                              start_year: 2004,
-                                             end_month: 8,
+                                             end_month: "August",
                                              end_year: 2006)
 
 skills = my_resume.experiences.create!(category: "skill")
+
+display1 = my_resume.displays.create!(category: "skill", placement: 1)
+display2 = my_resume.displays.create!(category: "education", placement: 2)
+display3 = my_resume.displays.create!(category: "paid", placement: 3)
 
 puts iron_yard.organization
 puts iron_yard.title

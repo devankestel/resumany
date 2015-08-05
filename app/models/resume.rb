@@ -99,7 +99,7 @@ class Resume < ActiveRecord::Base
       if demo_text
         file.text " "
         file.text " "
-        list_pdf(file, demo_text)
+        bullet_list(file, demo_text)
         end
       file.text " "
     end
@@ -194,6 +194,16 @@ class Resume < ActiveRecord::Base
       file.puts "" if demos
     end
   end
+
+  def bullet_list(file, items)
+      file.start_new_page if file.cursor < 50
+      items.each do |item|
+        file.text_box "•", at: [13, file.cursor]
+        file.indent(30) do
+          file.text item
+        end
+      end
+    end
 
   def list_pdf(file, items)
       rhythm  = 5

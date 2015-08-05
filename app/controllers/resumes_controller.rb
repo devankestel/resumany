@@ -47,6 +47,12 @@ class ResumesController < ApplicationController
   def update
     @resume = Resume.find(params[:id])
     @resume.update_attributes(resume_params)
+    unique_experience_categories = @resume.experiences.map{|experience| experience.category}.uniq.sort
+    unique_display_categories = @resume.displays.map{|display| display.category}.uniq.sort
+    if unique_experience_categories != unique_display_categories 
+      @resume.displays.destroy_all
+      set_default_display_order(@resume, unique_experience_categories)
+    end
     set_instances
     render 'show'
   end

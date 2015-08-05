@@ -65,7 +65,8 @@ class ResumesController < ApplicationController
     @resume = Resume.find(params[:id])
     @route = params[:id]
     @links = @resume.links.all
-    ordered_array = @resume.displays.map{|display| display.category}
+    ordered_displays = @resume.displays.all.order(:placement)
+    ordered_array = ordered_displays.map{|display| display.category}
     set_experiences(@resume, ordered_array)
     #@educational_experiences = @resume.experiences.where(category: "education")
     #@paid_experiences = @resume.experiences.where(category: "paid")

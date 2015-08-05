@@ -4,9 +4,6 @@
       <%= f.semantic_fields_for :displays do |display| %>
         <%= render 'display_fields', f: display %>
       <% end %>
-      <div class="links">
-        <%= link_to_add_association 'add display', f, :displays %>
-      </div>
       <%= f.actions %>
     <% end %>
   </div>

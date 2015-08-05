@@ -1,7 +1,7 @@
 class DisplaysController < ApplicationController
   def show
     @resume = Resume.find(params[:resume_id])
-    @display = @resume.displays.find(params[:id])
+    @display = @resume.displays.all
   end
 
   def edit

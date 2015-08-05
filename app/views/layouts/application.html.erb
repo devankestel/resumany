@@ -14,10 +14,10 @@
     <div id="center_nav" class="item">
       <%= link_to image_tag("cv_icon.svg", :class => "cv_icon"), "/resumes/cv" %>
       <!-- Edit or New, Depends on if CV has yet been generated -->
-      <%= link_to image_tag("edit_icon.svg", :class => "icon"), "/resumes/" %>
+      <%= link_to image_tag("edit_icon.svg", :class => "icon"), edit_resume_path(@resume) %>
       <!-- Only visible on /resumes/cv and /resumes/tags pages -->
-      <%= link_to image_tag("download_icon.svg", :class => "icon"), downloads_path %>
-      <%= link_to image_tag("sort_icon.svg", :class => "icon"), "/resumes/" %>
+      <%= link_to image_tag("download_icon.svg", :class => "icon"), edit_resume_downloads_path(@resume) %>
+      <%= link_to image_tag("sort_icon.svg", :class => "icon"), edit_resume_displays_path(@resume) %>
     </div>
     <div id="right_nav" class="item">
       <%= link_to "Login", "/resumes/", id: "login" %>

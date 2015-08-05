@@ -11,6 +11,7 @@ The Iron Yard
 Rails Engineering
 August 2015
 
+
 University of Notre Dame du Lac
 M.S. in Chemical and Biomolecular Engineering
 May 2010
@@ -22,10 +23,10 @@ B.S. in Chemical Engineering, minor in Spanish
 June 2007
 All chemical engineering courses relied heavily upon MATLAB and data science principles. Other relevant course: Intro to Python.
 
-Dupont Performance Coatings
-                                             (Now Axalta Coatings Systems)
+Dupont Performance Coatings                                             (Now Axalta Coatings Systems)
 Senior Chemical Engineer
 February 2011 - April 2015
+
 
   * Product formulation, optimization, and technical support of solventborne and waterborne automotive coatings for General Motors accounts with revenue exceeding $30MM annually.
   * Optimized, commercialized, and launched a two­-component, polyurethane clearcoat system which delivered $800M revenue growth in 2012.
@@ -35,15 +36,14 @@ February 2011 - April 2015
   * In addition to research and development, interface with manufacturing, quality assurance, sales and marketing, product stewardship, and field account teams on a daily basis.
   * Work in a high­pressured, multi­tasking environment with constantly changing priorities and frequently required to make "on the spot" decisions that directly impact manufacturing at both Axalta and GM sites.
   * Align formulas, manufacturing procedures, and product design specifications for manufacturing scale­-up.
-  * Serve on site team of internal quality auditors. Audit 6 areas per year against ISO:9001 and TS­16949 standards. Interview exempt and non­exempt employees across all shifts.
 
 University of Notre Dame du Lac
 Graduate Research Assistant
 October 2007 - March 2010
 
+
   * Thermophysical property measurement and estimation of ionic liquid systems for use as environmentally benign working fluids for carbon dioxide capture.
   * Worked in a hybrid experimental and computational team to rapidly screen and characterize candidate ionic liquids for process optima including: relative volatility and solubility, hydrophobicity, corrosivity, toxicity, reaction and absorption enthalpies, and others properties relevant to process scale­up.
-  * Gravimetric measurement of binary vapor­-liquid equilibrium curves of ionic liquids with components in flue gas (e.g. CO2, CH4, H2O) as well as N2O.
   * Analyzed and calculated hysteresis, infinite dilution activity coefficients, Henry's Law constants, and deconvolution of physical CO2 solubility from chemical CO2 reaction in amine­-functionalized ionic liquid systems.
   * Supervised design and construction of ionic liquid absorber/ stripper unit.
   * Proficient with both high and low pressure systems.
@@ -52,12 +52,10 @@ Alltech, Inc.
 Chemical Engineering Intern
 June 2004 - August 2006
 
+
   * Product development, process design, and pilot plant management for Optigen, a controlled­-release, non­protein nitrogen supplement for dairy cattle which is now commercialized.
-  * Facilitated formulation of controlled­-release coating.
   * Authored process flow diagrams. Collaborated on design of specialized fluidized bed dryer. Designated process instrumentation for final scale­up.
-  * Supervised 3­-4 production workers per shift in pilot plant operations.
-  * Designed and formulated a novel filtration system capable of 100% toxin removal from contaminated liquids.
-  * Bottled beer (KY Ale, KY Light, KY Bourbon Barrel Ale) at company microbrewery.
+
 
 
 

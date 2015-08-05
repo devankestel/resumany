@@ -17,8 +17,8 @@ class Resume < ActiveRecord::Base
 
   #accepts_nested_attributes_for :experience_demonstrations, allow_destroy: true
 
-  has_attached_file :pdf 
-  has_attached_file :docx 
+  has_attached_file :pdf
+  has_attached_file :docx
   has_attached_file :txt
 
   validates_attachment_content_type :pdf, :content_type =>['application/pdf']
@@ -85,6 +85,8 @@ class Resume < ActiveRecord::Base
   end
 
   def experiences_pdf(file, route)
+    #need to get experiences in the right order
+    #borrow from set experiences method? 
     self.experiences.each do |experience|
       file.text experience.organization
       file.text experience.title

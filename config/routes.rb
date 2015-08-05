@@ -1,9 +1,34 @@
 Rails.application.routes.draw do
   get '/resumes/download' => 'resumes#download', as: :downloads
   resources :resumes do
-    resources :downloads
-    resources :displays
+    resource :downloads
+    resource :displays
   end
+
+#                 Prefix Verb   URI Pattern                       Controller#Action
+#              downloads GET    /resumes/download(.:format)       resumes#download
+#      resumes_downloads POST   /resumes/downloads(.:format)      downloads#create
+#  new_resumes_downloads GET    /resumes/downloads/new(.:format)  downloads#new
+# edit_resumes_downloads GET    /resumes/downloads/edit(.:format) downloads#edit
+#                        GET    /resumes/downloads(.:format)      downloads#show
+#                        PATCH  /resumes/downloads(.:format)      downloads#update
+#                        PUT    /resumes/downloads(.:format)      downloads#update
+#                        DELETE /resumes/downloads(.:format)      downloads#destroy
+#       resumes_displays POST   /resumes/displays(.:format)       displays#create
+#   new_resumes_displays GET    /resumes/displays/new(.:format)   displays#new
+#  edit_resumes_displays GET    /resumes/displays/edit(.:format)  displays#edit
+#                        GET    /resumes/displays(.:format)       displays#show
+#                        PATCH  /resumes/displays(.:format)       displays#update
+#                        PUT    /resumes/displays(.:format)       displays#update
+#                        DELETE /resumes/displays(.:format)       displays#destroy
+#                resumes POST   /resumes(.:format)                resumes#create
+#            new_resumes GET    /resumes/new(.:format)            resumes#new
+#           edit_resumes GET    /resumes/edit(.:format)           resumes#edit
+#                        GET    /resumes(.:format)                resumes#show
+#                        PATCH  /resumes(.:format)                resumes#update
+#                        PUT    /resumes(.:format)                resumes#update
+#                        DELETE /resumes(.:format)                resumes#destroy
+
 
 #                 Prefix Verb   URI Pattern                                      Controller#Action
 #            downloads GET    /resumes/download(.:format)                      resumes#download

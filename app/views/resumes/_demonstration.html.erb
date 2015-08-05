@@ -1,6 +1,6 @@
 <% if demonstration.experience.category == "skill" %>
-  <li class="skill"><%= demonstration.skill_display.html_safe %></li>
+  <li class="skill" title="<%= "#{demonstration.tag_list.to_s}" %>"><%= demonstration.skill_display.html_safe %></li>
 <% else %>
-  <li><%= demonstration.description %></li>
+  <li title="<%= "#{demonstration.tag_list.to_s}" %>"><%= demonstration.description %></li>
 <% end %>
 

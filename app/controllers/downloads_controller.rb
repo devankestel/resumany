@@ -8,27 +8,26 @@ class DownloadsController < ApplicationController
     @resume = Resume.find(params[:resume_id])
     @download = @resume.downloads.create(download_params)
     write_and_attach_files(@download, @resume)
-    redirect_to resume_download_path(@resume, @download)
+    redirect_to resume_downloads_path(@resume)
   end
   
   def show
-    @download = Download.find(params[:id])
     @resume = Resume.find(params[:resume_id])
+    @download = @resume.downloads.first
   end
 
   def edit
     @resume = Resume.find(params[:resume_id])
-    @download = @resume.downloads.find(params[:id])
-    render 'new'
+    @download = @resume.downloads.first
   end
 
   def update
     @resume = Resume.find(params[:resume_id])
-    @download = Download.find(params[:id])
+    @download = @resume.downloads.first
     @download.update_attributes(download_params)
     destroy_currently_attached_files(@resume)
     write_and_attach_files(@download, @resume)
-    redirect_to resume_download_path(@resume, @download)
+    redirect_to resume_downloads_path(@resume)
   end
 
   private

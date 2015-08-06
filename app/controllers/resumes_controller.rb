@@ -69,11 +69,7 @@ class ResumesController < ApplicationController
 
   def set_instances
     # this will change when login and user are added
-    if params[:id].is_a?(Integer)
-      @resume = Resume.find(params[:id])
-    else
-      @resume = Resume.find(1)
-    end
+    @resume = @current_user.resume
     @route = params[:id]
     @links = @resume.links.all
     ordered_displays = @resume.displays.all.order(:placement)

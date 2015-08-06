@@ -4,19 +4,25 @@ class ResumesController < ApplicationController
   end
 
   def index
-    set_instances
-    experiences = @resume.experiences.all
-    experiences.each do |experience|
-      demos = experience.demonstrations.all
-      demos.each do |demo|
-        if @tags
-          @tags += demo.tags.all
-        else
-          @tags = demo.tags.all
+    if @current_user.resume
+      set_instances
+      experiences = @resume.experiences.all
+      experiences.each do |experience|
+        demos = experience.demonstrations.all
+        demos.each do |demo|
+          if @tags
+            @tags += demo.tags.all
+          else
+            @tags = demo.tags.all
+          end
         end
       end
+      if @tags
+        @tags = @tags.uniq
+      end
+    else
+      render 'new'
     end
-    @tags = @tags.uniq
   end
   
   def new

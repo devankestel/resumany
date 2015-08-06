@@ -12,7 +12,7 @@
       <%= link_to image_tag("resuMANY_logo.png", :class => "logo"), "/resumes/" %>
     </div>
     <div id="center_nav" class="item">
-      <% if session[:user_id] %>
+      <% if session[:user_id] && @current_user.resume %>
         <%= link_to image_tag("cv_icon.svg", :class => "cv_icon"), "/resumes/cv" %>
         <!-- Edit or New, Depends on if CV has yet been generated -->
         <%= link_to image_tag("edit_icon.svg", :class => "icon"), edit_resume_path(@resume) %>

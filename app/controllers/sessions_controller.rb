@@ -9,10 +9,14 @@ class SessionsController < ApplicationController
     user_password_param = params.require(:user).permit(:password)
     if @user && @user.authenticate(user_password_param[:password])
       session[:user_id] = @user.id
-      redirect_to root_path
+      if @user.resume
+        redirect_to root_path
+      else
+        redirect_to new_resume_path
+      end
     else
-      render inline: "failed login"      
-      #render :new
+      flash[:alert] = "Bad username or password. Try again."
+      render :new
     end
   end
 

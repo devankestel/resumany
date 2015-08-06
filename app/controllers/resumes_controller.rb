@@ -33,7 +33,7 @@ class ResumesController < ApplicationController
   end
 
   def create
-    @resume = Resume.create(resume_params)
+    @resume = @current_user.create_resume(resume_params)
     unique_categories = @resume.experiences.map{|experience| experience.category}.uniq
     puts unique_categories
     set_default_display_order(@resume, unique_categories)

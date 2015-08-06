@@ -10,6 +10,7 @@ class CreateResumes < ActiveRecord::Migration
       t.attachment :pdf
       t.attachment :txt
       t.attachment :docx
+      t.integer :user_id
 
       t.timestamps null: false
     end

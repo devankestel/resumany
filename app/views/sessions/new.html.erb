@@ -1,0 +1,16 @@
+<!-- needs to go to sessions#create -->
+
+<div id="formtastic_container" class="line">
+  <div id = "login_form">
+    <%= semantic_form_for @user, url: login_path do |f| %>  
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.actions %>
+    <% end %>
+  </div>
+</div>  
+
+
+<p> Don't have an account? <%= link_to "Register", new_user_path %> </p>
+
+  

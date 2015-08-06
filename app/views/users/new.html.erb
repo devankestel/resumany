@@ -1,0 +1,14 @@
+<h1>Register</h1>
+
+<div id="formtastic_container" class="line">
+  <div id = "registration_form">
+    <%= semantic_form_for @user do |f| %>  
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation %>
+      <%= f.actions %>
+    <% end %>
+  </div>
+</div>  
+
+

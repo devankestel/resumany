@@ -12,15 +12,22 @@
       <%= link_to image_tag("resuMANY_logo.png", :class => "logo"), "/resumes/" %>
     </div>
     <div id="center_nav" class="item">
-      <%= link_to image_tag("cv_icon.svg", :class => "cv_icon"), "/resumes/cv" %>
-      <!-- Edit or New, Depends on if CV has yet been generated -->
-      <%= link_to image_tag("edit_icon.svg", :class => "icon"), edit_resume_path(@resume) %>
-      <!-- Only visible on /resumes/cv and /resumes/tags pages -->
-      <%= link_to image_tag("download_icon.svg", :class => "icon"), edit_resume_downloads_path(@resume) %>
-      <%= link_to image_tag("sort_icon.svg", :class => "icon"), edit_resume_displays_path(@resume) %>
+      <% if session[:user_id] %>
+        <%= link_to image_tag("cv_icon.svg", :class => "cv_icon"), "/resumes/cv" %>
+        <!-- Edit or New, Depends on if CV has yet been generated -->
+        <%= link_to image_tag("edit_icon.svg", :class => "icon"), edit_resume_path(@resume) %>
+        <!-- Only visible on /resumes/cv and /resumes/tags pages -->
+        <%= link_to image_tag("download_icon.svg", :class => "icon"), edit_resume_downloads_path(@resume) %>
+        <%= link_to image_tag("sort_icon.svg", :class => "icon"), edit_resume_displays_path(@resume) %>
+      <% end %>
+
     </div>
     <div id="right_nav" class="item">
-      <%= link_to "Login", "/resumes/", id: "login" %>
+      <% if session[:user_id].nil? %>
+        <%= link_to "Log In", login_path, id: "login" %>
+      <% else %>
+        <%= link_to "#{@current_user.email} Log Out", logout_path, method: :delete, id: "login" %>
+      <% end %>
     </div>
     <div id="right_pad" class="item"></div>
   </nav>
@@ -29,3 +36,4 @@
   </div>
 </body>
 </html>
+

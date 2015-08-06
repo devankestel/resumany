@@ -1,53 +1,46 @@
 Rails.application.routes.draw do
-  get '/resumes/download' => 'resumes#download', as: :downloads
+
+  root 'resumes#index'
+
+  resources :users
+
+  get 'login' => 'sessions#new', as: :login
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy', as: :logout
+
   resources :resumes do
     resource :downloads
     resource :displays
   end
 
-#                 Prefix Verb   URI Pattern                       Controller#Action
-#              downloads GET    /resumes/download(.:format)       resumes#download
-#      resumes_downloads POST   /resumes/downloads(.:format)      downloads#create
-#  new_resumes_downloads GET    /resumes/downloads/new(.:format)  downloads#new
-# edit_resumes_downloads GET    /resumes/downloads/edit(.:format) downloads#edit
-#                        GET    /resumes/downloads(.:format)      downloads#show
-#                        PATCH  /resumes/downloads(.:format)      downloads#update
-#                        PUT    /resumes/downloads(.:format)      downloads#update
-#                        DELETE /resumes/downloads(.:format)      downloads#destroy
-#       resumes_displays POST   /resumes/displays(.:format)       displays#create
-#   new_resumes_displays GET    /resumes/displays/new(.:format)   displays#new
-#  edit_resumes_displays GET    /resumes/displays/edit(.:format)  displays#edit
-#                        GET    /resumes/displays(.:format)       displays#show
-#                        PATCH  /resumes/displays(.:format)       displays#update
-#                        PUT    /resumes/displays(.:format)       displays#update
-#                        DELETE /resumes/displays(.:format)       displays#destroy
-#                resumes POST   /resumes(.:format)                resumes#create
-#            new_resumes GET    /resumes/new(.:format)            resumes#new
-#           edit_resumes GET    /resumes/edit(.:format)           resumes#edit
-#                        GET    /resumes(.:format)                resumes#show
-#                        PATCH  /resumes(.:format)                resumes#update
-#                        PUT    /resumes(.:format)                resumes#update
-#                        DELETE /resumes(.:format)                resumes#destroy
+# Devans-MBP% rake routes
+#                Prefix Verb   URI Pattern                                  Controller#Action
+#             downloads GET    /resumes/download(.:format)                  resumes#download
+#      resume_downloads POST   /resumes/:resume_id/downloads(.:format)      downloads#create
+#  new_resume_downloads GET    /resumes/:resume_id/downloads/new(.:format)  downloads#new
+# edit_resume_downloads GET    /resumes/:resume_id/downloads/edit(.:format) downloads#edit
+#                       GET    /resumes/:resume_id/downloads(.:format)      downloads#show
+#                       PATCH  /resumes/:resume_id/downloads(.:format)      downloads#update
+#                       PUT    /resumes/:resume_id/downloads(.:format)      downloads#update
+#                       DELETE /resumes/:resume_id/downloads(.:format)      downloads#destroy
+#       resume_displays POST   /resumes/:resume_id/displays(.:format)       displays#create
+#   new_resume_displays GET    /resumes/:resume_id/displays/new(.:format)   displays#new
+#  edit_resume_displays GET    /resumes/:resume_id/displays/edit(.:format)  displays#edit
+#                       GET    /resumes/:resume_id/displays(.:format)       displays#show
+#                       PATCH  /resumes/:resume_id/displays(.:format)       displays#update
+#                       PUT    /resumes/:resume_id/displays(.:format)       displays#update
+#                       DELETE /resumes/:resume_id/displays(.:format)       displays#destroy
+#               resumes GET    /resumes(.:format)                           resumes#index
+#                       POST   /resumes(.:format)                           resumes#create
+#            new_resume GET    /resumes/new(.:format)                       resumes#new
+#           edit_resume GET    /resumes/:id/edit(.:format)                  resumes#edit
+#                resume GET    /resumes/:id(.:format)                       resumes#show
+#                       PATCH  /resumes/:id(.:format)                       resumes#update
+#                       PUT    /resumes/:id(.:format)                       resumes#update
+#                       DELETE /resumes/:id(.:format)                       resumes#destroy
 
 
-#                 Prefix Verb   URI Pattern                                      Controller#Action
-#            downloads GET    /resumes/download(.:format)                      resumes#download
-#     resume_downloads GET    /resumes/:resume_id/downloads(.:format)          downloads#index
-#                      POST   /resumes/:resume_id/downloads(.:format)          downloads#create
-#  new_resume_download GET    /resumes/:resume_id/downloads/new(.:format)      downloads#new
-# edit_resume_download GET    /resumes/:resume_id/downloads/:id/edit(.:format) downloads#edit
-#      resume_download GET    /resumes/:resume_id/downloads/:id(.:format)      downloads#show
-#                      PATCH  /resumes/:resume_id/downloads/:id(.:format)      downloads#update
-#                      PUT    /resumes/:resume_id/downloads/:id(.:format)      downloads#update
-#                      DELETE /resumes/:resume_id/downloads/:id(.:format)      downloads#destroy
-#              resumes GET    /resumes(.:format)                               resumes#index
-#                      POST   /resumes(.:format)                               resumes#create
-#           new_resume GET    /resumes/new(.:format)                           resumes#new
-#          edit_resume GET    /resumes/:id/edit(.:format)                      resumes#edit
-#               resume GET    /resumes/:id(.:format)                           resumes#show
-#                      PATCH  /resumes/:id(.:format)                           resumes#update
-#                      PUT    /resumes/:id(.:format)                           resumes#update
-#                      DELETE /resumes/:id(.:format)                           resumes#destroy
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -5,12 +5,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email])
-    if @user && @user.authenticate(params[:password])
+    @user = User.find_by(user_email_param)
+    if @user
       session[:user_id] = @user.id
       redirect_to root_path
     else
-      render :new
+      render inline: "failed login"      
+      #render :new
     end
   end
 
@@ -19,8 +20,14 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def user_params
-    params.require(:user).permit(:email, :password)
+  def user_email_param
+    params.require(:user).permit(:email)
+  end
+
+  def user_password_param
+    params.require(:user).permit(:password)
   end
 
 end
+
+#&& @user.authenticate(params[:password])

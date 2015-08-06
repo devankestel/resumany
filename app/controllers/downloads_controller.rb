@@ -18,7 +18,11 @@ class DownloadsController < ApplicationController
 
   def edit
     @resume = Resume.find(params[:resume_id])
-    @download = @resume.downloads.first
+    if @resume.downloads.first
+      @download = @resume.downloads.first
+    else
+      redirect_to new_resume_downloads_path
+    end
   end
 
   def update

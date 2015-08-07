@@ -13,7 +13,7 @@ class Resume < ActiveRecord::Base
 
   accepts_nested_attributes_for :links, allow_destroy: true
   accepts_nested_attributes_for :experiences, allow_destroy: true
-  accepts_nested_attributes_for :demonstrations
+  accepts_nested_attributes_for :demonstrations, allow_destroy: true
   accepts_nested_attributes_for :downloads
   accepts_nested_attributes_for :displays
 

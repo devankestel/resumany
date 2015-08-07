@@ -40,7 +40,7 @@ class ResumesController < ApplicationController
 
   def create
     @resume = @current_user.create_resume(resume_params)
-    unique_categories = @resume.experiences.map{|experience| experience.category}.uniq
+    unique_categories = @resume.experiences.map{|experience| "#{experience.category}" }.uniq
     puts unique_categories
     set_default_display_order(@resume, unique_categories)
     #@resume.displays.create(category: "skill", placement: 1)
@@ -53,7 +53,7 @@ class ResumesController < ApplicationController
   def update
     @resume = Resume.find(params[:id])
     @resume.update_attributes(resume_params)
-    unique_experience_categories = @resume.experiences.map{|experience| experience.category}.uniq.sort
+    unique_experience_categories = @resume.experiences.map{|experience| "#{experience.category}"}.uniq.sort
     unique_display_categories = @resume.displays.map{|display| display.category}.uniq.sort
     if unique_experience_categories != unique_display_categories 
       @resume.displays.destroy_all
@@ -121,9 +121,9 @@ class ResumesController < ApplicationController
   end
   def resume_params
      params.require(:resume).permit(:id, :name, :profile, :email, :phone, 
-                                    links_attributes: [:id, :title, :url, :resume_id],
-                                    displays_attributes: [:id, :placement, :category, :resume_id], 
-                                    experiences_attributes: [:id, :resume_id, :title, :description, :organization, :start_month, :star_year, :end_month, :end_year, :category, :city, :state_or_country, :present, demonstrations_attributes: [:id, :tag_list, :experience_id, :description, :core, :subset, :category, :display]]
+                                    links_attributes: [:id, :title, :url, :resume_id, :_destroy],
+                                    displays_attributes: [:id, :placement, :category, :resume_id, :_destroy], 
+                                    experiences_attributes: [:id, :_destroy, :resume_id, :title, :description, :organization, :start_month, :star_year, :end_month, :end_year, :category, :city, :state_or_country, :present, demonstrations_attributes: [:id, :_destroy, :tag_list, :experience_id, :description, :core, :subset, :category, :display]]
                                     )
   end
   

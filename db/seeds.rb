@@ -33,14 +33,18 @@ Link.destroy_all
 Experience.destroy_all
 Demonstration.destroy_all
 Download.destroy_all
+User.destroy_all
 
 seed_txt = File.open('/Users/devankestel1/Documents/resumany/app/assets/txt/seed.txt')
 seed_pdf = File.open('/Users/devankestel1/Documents/resumany/app/assets/pdf/seed.pdf')
 seed_docx = File.open ('/Users/devankestel1/Documents/resumany/app/assets/docx/seed.docx')
 
+user = User.create(email: "devan.kestel@gmail.com", 
+                   password: "taterz")
+
 # new lesson: excitedly create thigns so we get real errors!
 
-my_resume = Resume.create!(name: "Devan E. Kestel",
+my_resume = user.create_resume!(name: "Devan E. Kestel",
                           resume_name: "cv",
                           email: "devan.kestel@gmail.com",
                           phone: "617.233.2629",

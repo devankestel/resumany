@@ -1,28 +1,4 @@
-== README
+== resuMANY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+resuMANY allows users to create a bullet-list style curriculum vitae and auto-generates a series of subset resumes based on tagged categories (e.g “leadership”, “problem solving”, etc.) designated by the user. All auto-generated resumes are downloadable in PDF, Word, and Text formats. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

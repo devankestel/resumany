@@ -21,10 +21,11 @@ class ResumesController < ApplicationController
         @tags = @tags.uniq
       end
     else
+      @resume = Resume.new
       render 'new'
     end
   end
-  
+
   def new
     @resume = Resume.new()
     @links = @resume.links.new()
@@ -55,7 +56,7 @@ class ResumesController < ApplicationController
     @resume.update_attributes(resume_params)
     unique_experience_categories = @resume.experiences.map{|experience| "#{experience.category}"}.uniq.sort
     unique_display_categories = @resume.displays.map{|display| display.category}.uniq.sort
-    if unique_experience_categories != unique_display_categories 
+    if unique_experience_categories != unique_display_categories
       @resume.displays.destroy_all
       set_default_display_order(@resume, unique_experience_categories)
     end
@@ -113,19 +114,19 @@ class ResumesController < ApplicationController
     if categories.include?("volunteer")
       ordered_categories << "volunteer"
     end
-    puts ordered_categories 
+    puts ordered_categories
     ordered_categories.each do |category|
       placement = ordered_categories.index(category) + 1
       resume.displays.create(category: category, placement: placement)
-    end  
+    end
   end
   def resume_params
-     params.require(:resume).permit(:id, :name, :profile, :email, :phone, 
+     params.require(:resume).permit(:id, :name, :profile, :email, :phone,
                                     links_attributes: [:id, :title, :url, :resume_id, :_destroy],
-                                    displays_attributes: [:id, :placement, :category, :resume_id, :_destroy], 
+                                    displays_attributes: [:id, :placement, :category, :resume_id, :_destroy],
                                     experiences_attributes: [:id, :_destroy, :resume_id, :title, :description, :organization, :start_month, :star_year, :end_month, :end_year, :category, :city, :state_or_country, :present, demonstrations_attributes: [:id, :_destroy, :tag_list, :experience_id, :description, :core, :subset, :category, :display]]
                                     )
   end
-  
+
 end
 

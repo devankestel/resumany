@@ -35,11 +35,11 @@ Demonstration.destroy_all
 Download.destroy_all
 User.destroy_all
 
-seed_txt = File.open('/Users/devankestel1/Documents/resumany/app/assets/txt/seed.txt')
-seed_pdf = File.open('/Users/devankestel1/Documents/resumany/app/assets/pdf/seed.pdf')
-seed_docx = File.open ('/Users/devankestel1/Documents/resumany/app/assets/docx/seed.docx')
+seed_txt = File.open("#{Rails.root}/app/assets/txt/seed.txt")
+seed_pdf = File.open("#{Rails.root}/app/assets/pdf/seed.pdf")
+seed_docx = File.open ("#{Rails.root}/app/assets/docx/seed.docx")
 
-user = User.create(email: "devan.kestel@gmail.com", 
+user = User.create(email: "devan.kestel@gmail.com",
                    password: "taterz")
 
 # new lesson: excitedly create thigns so we get real errors!
@@ -269,7 +269,7 @@ skills_l1 = skills.demonstrations.create!(display: "list",
 skills_p1 = skills.demonstrations.create!(display: "paragraph",
                                           subset: "Spanish",
                                           description: "Here is where I blather about my fancy study abroad in Madrid that lasted six months where I took lots of courses and did lots of things. Fluency in a foreign language is cool and should count for something.",
-                                          core: true) 
+                                          core: true)
 
 
 
